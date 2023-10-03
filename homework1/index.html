@@ -10,10 +10,18 @@
         <!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке. -->
         <h1>Задание 1</h1>
         <button @click="flipedText">{{ invertedText }}</button>
+
+        <hr>
+        <!-- 2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить". -->
+        <!-- *Дополнительное задание: При клике на элемент списка он должен быть удален. (по желанию) -->
+        <h1>Задание 2</h1>
+        <h2>Список элементов</h2>
+        <ul>
+            <li v-for="(item, index) in listItems" @click="removeListItem(index)">{{ item }} </li>
+        </ul>
+        <button @click="addListItem">Добавить</button>
+        <button @click="removeLastListItem">Убрать последний</button>
     </div>
-
-
-
 
     <script src="https://unpkg.com/vue@next"></script>
     <script>
@@ -21,6 +29,8 @@
             data() {
                 return {
                     invertedText: 'Перевернуть',
+                    newListItem: 'Новый элемент списка',
+                    listItems: ['Lorem, ipsum dolor.', 'Lorem, ipsum dolor.', 'Lorem, ipsum dolor.', 'Lorem, ipsum dolor.', 'Lorem, ipsum dolor.'],
                 };
             },
             methods: {
@@ -33,6 +43,15 @@
                     }
 
                     this.invertedText = tempArr.join('');
+                },
+                addListItem() {
+                    this.listItems.push(this.newListItem);
+                },
+                removeLastListItem() {
+                    this.listItems.pop();
+                },
+                removeListItem(index) {
+                    this.listItems.splice(index, 1);
                 }
             },
         }
