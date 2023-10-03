@@ -6,6 +6,39 @@
     <title>Homework 1</title>
 </head>
 <body>
-    
+    <div id="app">
+        <!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке. -->
+        <h1>Задание 1</h1>
+        <button @click="flipedText">{{ invertedText }}</button>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    invertedText: 'Перевернуть',
+                };
+            },
+            methods: {
+                flipedText() {
+                    const tempArr = this.invertedText.split('');
+                    for (let i = 0; i < tempArr.length / 2; i++) {
+                        let temp = tempArr[i];
+                        tempArr[i] = tempArr[tempArr.length - 1 - i];
+                        tempArr[tempArr.length - 1 - i] = temp;
+                    }
+
+                    this.invertedText = tempArr.join('');
+                }
+            },
+        }
+
+        Vue.createApp(App).mount('#app');
+
+    </script>
 </body>
 </html>
