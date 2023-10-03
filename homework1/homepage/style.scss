@@ -21,7 +21,8 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+button:hover {
   cursor: pointer;
 }
 
@@ -62,6 +63,10 @@ input {
     padding-top: 210px;
     padding-bottom: 210px;
     padding-left: 55px;
+    padding-right: 711px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
   }
 
   &__content {
@@ -86,7 +91,6 @@ input {
     font-weight: 400;
     line-height: 150%; /* 33px */
     letter-spacing: 0.22px;
-    padding-bottom: 3px;
   }
 
   &__button {
@@ -100,6 +104,119 @@ input {
     border-radius: 18px;
     background: #292f36;
     box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-    padding: 26px 48px;
+    padding: 26px 49px 26px 48px;
+    max-width: 220px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__button path {
+    width: 15px;
+    height: 11px;
+  }
+}
+
+.projects {
+  padding-top: 93px;
+  padding-bottom: 40px;
+  &__main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  &__title {
+    color: #292f36;
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    // line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+  }
+  &__text {
+    color: #4d5053;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    // line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    width: 737px;
+    margin-bottom: 93px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    column-gap: 100px;
+    row-gap: 56px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__card-image {
+
+    width: 550px;
+    &_right-top-border {
+        border-top-right-radius: 55px;
+    }
+    &_left-top-border {
+        border-top-left-radius: 55px;
+    }
+    &_right-bottom-border {
+        border-bottom-right-radius: 55px;
+    }
+    &_left-bottom-border {
+        border-bottom-left-radius: 55px;
+    }
+  }
+
+  &__card-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__card-title {
+    color: #292f36;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    // line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+
+  &__card-category {
+    color: #4d5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    // line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+
+  &__card-button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f4f0ec;
   }
 }

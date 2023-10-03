@@ -21,7 +21,8 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+button:hover {
   cursor: pointer;
 }
 
@@ -61,6 +62,10 @@ input {
   padding-top: 210px;
   padding-bottom: 210px;
   padding-left: 55px;
+  padding-right: 711px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
 }
 .intro__content {
   width: 434px;
@@ -82,7 +87,6 @@ input {
   font-weight: 400;
   line-height: 150%; /* 33px */
   letter-spacing: 0.22px;
-  padding-bottom: 3px;
 }
 .intro__button {
   color: #fff;
@@ -95,5 +99,104 @@ input {
   border-radius: 18px;
   background: #292f36;
   box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
-  padding: 26px 48px;
+  padding: 26px 49px 26px 48px;
+  max-width: 220px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.intro__button path {
+  width: 15px;
+  height: 11px;
+}
+
+.projects {
+  padding-top: 93px;
+  padding-bottom: 40px;
+}
+.projects__main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.projects__title {
+  color: #292f36;
+  text-align: center;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.projects__text {
+  color: #4d5053;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  width: 737px;
+  margin-bottom: 93px;
+}
+.projects__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 550px);
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  row-gap: 56px;
+}
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.projects__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.projects__card-image {
+  width: 550px;
+}
+.projects__card-image_right-top-border {
+  border-top-right-radius: 55px;
+}
+.projects__card-image_left-top-border {
+  border-top-left-radius: 55px;
+}
+.projects__card-image_right-bottom-border {
+  border-bottom-right-radius: 55px;
+}
+.projects__card-image_left-bottom-border {
+  border-bottom-left-radius: 55px;
+}
+.projects__card-content {
+  display: flex;
+  justify-content: space-between;
+}
+.projects__card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.projects__card-title {
+  color: #292f36;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.projects__card-category {
+  color: #4d5053;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+}
+.projects__card-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: #f4f0ec;
 }/*# sourceMappingURL=style.css.map */
