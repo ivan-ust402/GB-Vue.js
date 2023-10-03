@@ -167,19 +167,18 @@ input {
   }
 
   &__card-image {
-
     width: 550px;
     &_right-top-border {
-        border-top-right-radius: 55px;
+      border-top-right-radius: 55px;
     }
     &_left-top-border {
-        border-top-left-radius: 55px;
+      border-top-left-radius: 55px;
     }
     &_right-bottom-border {
-        border-bottom-right-radius: 55px;
+      border-bottom-right-radius: 55px;
     }
     &_left-bottom-border {
-        border-bottom-left-radius: 55px;
+      border-bottom-left-radius: 55px;
     }
   }
 
@@ -218,5 +217,55 @@ input {
     border-radius: 50%;
     border: none;
     background-color: #f4f0ec;
+  }
+}
+
+.achivements {
+  padding-top: 151px;
+  padding-bottom: 151px;
+  background-color: #f4f0ec;
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 76px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+/*   &__item:not(:last-child) {
+    border-right: 1px solid #cda274;
+  } */
+  &__item:not(:last-child)::after {
+    content: " ";
+    background: #CDA274;
+    width: 1px;
+    height: 130px;
+  }
+  &__title {
+    color: #cda274;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 106.25px */
+    letter-spacing: 1.7px;
+    text-align: center;
+  }
+  &__text {
+    color: #4d5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    // text-align: center;
   }
 }
