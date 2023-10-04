@@ -329,6 +329,7 @@ input {
     transition: all 0.3s ease-in;
     &:hover {
       background-color: #eaeaea;
+      cursor: pointer;
     }
   }
 

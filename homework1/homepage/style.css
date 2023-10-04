@@ -308,6 +308,7 @@ input {
 }
 .articles__card-border:hover {
   background-color: #eaeaea;
+  cursor: pointer;
 }
 .articles__card {
   padding-bottom: 20px;
