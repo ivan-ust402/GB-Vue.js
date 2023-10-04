@@ -51,6 +51,10 @@ input {
     font-size: 20px;
     font-weight: 400;
     line-height: 125%; /* 25px */
+    transition: all .3s ease-in;
+    &:hover {
+      color: #cda274;
+    }
   }
 }
 
@@ -109,6 +113,12 @@ input {
     display: flex;
     gap: 10px;
     align-items: center;
+    transition: all .3s ease-in;
+    &:hover {
+      color: #cda274;
+      background-color: #151616;
+    }
+
   }
 
   &__button path {
@@ -217,7 +227,7 @@ input {
     border-radius: 50%;
     border: none;
     background-color: #f4f0ec;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     &:hover {
       background-color: #eaeaea;
     }
@@ -316,7 +326,7 @@ input {
     border-radius: 62px;
     border: 1px solid #e7e7e7;
     box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     &:hover {
       background-color: #eaeaea;
     }
@@ -378,9 +388,89 @@ input {
     border-radius: 50%;
     border: none;
     background-color: #f4f0ec;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     &:hover {
       background-color: #fffafa;
     }
+  }
+}
+
+.footer {
+  padding-bottom: 134px;
+  &__content {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 2fr;
+    gap: 101px;
+  }
+
+  &__description {
+    color: #4d5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+
+  &__text {
+    padding-top: 18px;
+    padding-bottom: 31px;
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 54px;
+  }
+  &__social-media-link {
+    &:hover path {
+      fill: #cda274;
+    }
+  }
+
+  /*   &__nav {
+    padding-left: 101px;
+    padding-right: 101px;
+  } */
+
+  &__nav-title {
+    color: #292f36;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    padding-bottom: 9px;
+  }
+
+  &__nav-item {
+    list-style-type: none;
+  }
+  &__nav-link {
+    color: #4d5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 300%; /* 66px */
+    letter-spacing: 0.22px;
+    transition: all .3s ease-in;
+    &:hover {
+      color: #cda274;
+    }
+  }
+
+  &__contact-title {
+    color: #292f36;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    margin-bottom: 26px;
+  }
+  &__contact-info {
+    color: #4D5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 300%;
+    letter-spacing: 0.22px;
   }
 }
