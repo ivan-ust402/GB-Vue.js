@@ -1,3 +1,22 @@
+.articles-intro {
+  background-image: url("../img/articles/Main-background.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.articles-intro__content {
+  width: 503px;
+  padding: 41px 78px;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 41px;
+  border-top-left-radius: 41px;
+  margin-top: 178px;
+}
+
 * {
   margin: 0;
   padding: 0;
