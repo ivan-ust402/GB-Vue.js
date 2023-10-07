@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework2</title>
+    <style>
+        .product-list {
+            width: 350px;
+            list-style-type: none;
+        }
+        .product-list__item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Часть 2. Задание Vue
+
+    Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию).
+    -->
+    <div id="app">
+        <h1>Задание</h1>
+        <h2>Список товаров</h2>
+        <ul class="product-list">
+            <li v-for="(product, index) in products" :key="product.id" class="product-list__item">
+                {{ ++index }}. {{ product.name }} <span>цена: {{ product.price }} &#8381;</span>
+            </li>
+        </ul>
+        <button @click="sortByDecrease">Сортировать по убыванию цены</button>
+        <button @click="sortByIncrease">Сортировать по возрастанию цены</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    products: [
+                        {id: 0, name: 'Чайник', price: 2999},
+                        {id: 1, name: 'Утюг', price: 6999},
+                        {id: 2, name: 'Пылесос', price: 5899},
+                        {id: 3, name: 'Холодильник', price: 38999},
+                        {id: 4, name: 'Телевизор', price: 17590},
+                        {id: 5, name: 'СВЧ-печь', price: 4999},
+                        {id: 6, name: 'Духовка', price: 12999},
+                        {id: 7, name: 'Стиральная машина', price: 49999},
+                        {id: 8, name: 'Холодильник', price: 38999},
+                        {id: 9, name: 'Телевизор', price: 17590},
+                    ]
+                }
+            },
+            methods: {
+                sortByIncrease() {
+                    this.products.sort((a, b) => a.price - b.price);
+                    console.log(this.products);
+                },
+                sortByDecrease() {
+                    this.products.sort((a, b) => b.price - a.price);
+                    console.log(this.products);
+
+                }
+            }
+        };
+
+        Vue.createApp(App).mount('#app');
+    </script>
 </body>
 </html>
