@@ -34,7 +34,7 @@
       <div class="latest-article__card-border">
         <div class="latest-article__card">
           <img
-            src="img/articles/article-7.jpg"
+            src="img/articles/article-7.png"
             alt="article photo"
             class="latest-article__card-img"
           />
@@ -86,124 +86,77 @@
           of using.
         </p>
       </div>
-      <div class="articles__cards">
-        <div class="articles__card-border">
-          <div class="articles__card">
-            <figure class="articles__card-figure">
-              <img
-                src="img/homepage/article-1.png"
-                alt="article image"
-                class="articles__card-image"
-              />
-              <figcaption class="articles__card-figcapture">
-                Kitchan Design
-              </figcaption>
-            </figure>
-            <div class="articles__card-description">
-              <h3 class="articles__card-title">
-                Let’s Get Solution For Building Construction Work
-              </h3>
-              <div class="articles__card-footer">
-                <p class="articles__card-date">26 December,2022</p>
-                <button class="articles__card-button">
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
-                      stroke="#292F36"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
+      <div id="app">
+        <div class="articles__cards" >
+            <div class="articles__card-border" v-for="(article, index) in articles" :key="index">
+              <div class="articles__card">
+                <figure class="articles__card-figure">
+                  <img
+                    :src="article.imgSrc"
+                    alt="article image"
+                    class="articles__card-image"
+                  />
+                  <figcaption class="articles__card-figcapture">
+                    {{ article.capture }}
+                  </figcaption>
+                </figure>
+                <div class="articles__card-description">
+                  <h3 class="articles__card-title">
+                        {{ article.title }} 
+                        <span class="articles__card-title_span">
+                            {{ article.span }}
+                        </span>
+                  </h3>
+                  <div class="articles__card-footer">
+                    <p class="articles__card-date">{{article.date}}</p>
+                    <button class="articles__card-button">
+                      <svg
+                        width="9"
+                        height="16"
+                        viewBox="0 0 9 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
+                          stroke="#292F36"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+    
         </div>
-        <div class="articles__card-border">
-          <div class="articles__card">
-            <figure class="articles__card-figure">
-              <img
-                src="img/homepage/article-2.png"
-                alt="article image"
-                class="articles__card-image"
-              />
-              <figcaption class="articles__card-figcapture">
-                Living Design
-              </figcaption>
-            </figure>
-            <div class="articles__card-description">
-              <h3 class="articles__card-title">
-                Low Cost Latest Invented Interior Designing <br />Ideas.
-              </h3>
-              <div class="articles__card-footer">
-                <p class="articles__card-date">22 December,2022</p>
-                <button class="articles__card-button">
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
-                      stroke="#292F36"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="articles__pagination">
+            <button class="articles__pagination-link articles__pagination-link_active" active>01</button>
+            <button class="articles__pagination-link">02</button>
+            <button class="articles__pagination-link">03</button>
+            <button class="articles__pagination-link">
+                <svg
+                  width="9"
+                  height="16"
+                  viewBox="0 0 9 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
+                    stroke="#292F36"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
         </div>
-        <div class="articles__card-border">
-          <div class="articles__card">
-            <figure class="articles__card-figure">
-              <img
-                src="img/homepage/article-3.png"
-                alt="article image"
-                class="articles__card-image"
-              />
-              <figcaption class="articles__card-figcapture">
-                Interior Design
-              </figcaption>
-            </figure>
-            <div class="articles__card-description">
-              <h3 class="articles__card-title">
-                Best For Any Office & Business Interior <br />Solution
-              </h3>
-              <div class="articles__card-footer">
-                <p class="articles__card-date">25 December,2022</p>
-                <button class="articles__card-button">
-                  <svg
-                    width="9"
-                    height="16"
-                    viewBox="0 0 9 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
-                      stroke="#292F36"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      
+
       </div>
     </section>
     <footer class="footer center">
@@ -269,5 +222,65 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    articles: [
+                        {
+                            id: 0,
+                            imgSrc: "img/articles/article-1.png",
+                            capture: 'Kitchan Design',
+                            title: 'Let’s Get Solution For Building Construction',
+                            span: 'Work',
+                            date: '26 December,2022',
+                        },
+                        {
+                            id: 1,
+                            imgSrc: "img/articles/article-2.png",
+                            capture: 'Living Design',
+                            title: 'Low Cost Latest Invented Interior Designing', 
+                            span: 'Ideas.',
+                            date: '22 December,2022 ',
+                        },
+                        {
+                            id: 2,
+                            imgSrc: "img/articles/article-3.png",
+                            capture: 'Interior Design',
+                            title: 'Best For Any Office & Business Interior', 
+                            span: 'Solution',
+                            date: '22 December,2022 ',
+                        },
+                        {
+                            id: 3,
+                            imgSrc: "img/articles/article-4.png",
+                            capture: 'Kitchan Design',
+                            title: 'Let’s Get Solution For Building Construction',
+                            span: 'Work',
+                            date: '26 December,2022',
+                        },
+                        {
+                            id: 4,
+                            imgSrc: "img/articles/article-5.png",
+                            capture: 'Living Design',
+                            title: 'Low Cost Latest Invented Interior Designing', 
+                            span: 'Ideas.',
+                            date: '22 December,2022 ',
+                        },
+                        {
+                            id: 5,
+                            imgSrc: "img/articles/article-6.png",
+                            capture: 'Interior Design',
+                            title: 'Best For Any Office & Business Interior', 
+                            span: 'Solution',
+                            date: '22 December,2022',
+                        }
+                    ]
+                }
+            }
+        }
+        Vue.createApp(App).mount('#app');
+    </script>
   </body>
 </html>
