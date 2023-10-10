@@ -28,7 +28,7 @@
       <div class="blog-articles__articles">
         <div
           class="blog-articles__article"
-          v-for="article in articles"
+          v-for="article in filterArticles"
           :key="article.id"
         >
           <h2 class="blog-articles__title">
@@ -84,13 +84,11 @@
       </div>
       <div class="blog-articles__tabs-block">
         <h3 class="blog-articles__tabs-title">Tags</h3>
-        <div class="blog-articles__tabs">
+        <div class="blog-articles__tabs" @click="addClassActive">
           <button
             class="blog-articles__tab-button"
             v-for="(tag, index) in tags"
             :key="index"
-            @click="isActive = !isActive"
-            :class="classActive : isActive"
           >
             {{tag}}
           </button>
@@ -174,12 +172,7 @@
               "Kitchen Planning",
               "Bathroom",
             ],
-            currentTag: "Kitchen",
-            isActive: false,
-            classActive: {
-                background: '#292f36',
-                color: '#fff',
-            },
+            currentTag: '',
             articles: [
               {
                 id: 0,
@@ -532,10 +525,26 @@
             ],
           }
         },
+        methods: {
+          addClassActive() {
+           const childArr = [...event.target.closest('.blog-articles__tabs').children]
+            .map(children => children.classList.remove('blog-articles__tab-button_active'));
+            if (event.target.classList.contains('blog-articles__tab-button')) {
+              event.target.classList.add('blog-articles__tab-button_active');
+              this.currentTag = event.target.innerText;
+            } else {
+              this.currentTag = '';
+            }
+            
+          },
+        },
         computed: {
-          findByTag(event, tag) {
-            console.log(tag)
-            return;
+          filterArticles() {
+            if (this.currentTag === "") {
+              return this.articles
+            } else {
+              return this.articles.filter(article => article.tag === this.currentTag);
+            }
           },
         },
       }
