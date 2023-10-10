@@ -72,6 +72,14 @@
   width: 489px;
 }
 
+.blog-intro {
+  background-image: url("../img/blog-details/Backgound-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 351px;
+}
+
 * {
   margin: 0;
   padding: 0;
