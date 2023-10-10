@@ -205,7 +205,7 @@
 }
 .blog-articles__tabs {
   display: flex;
-  width: 335px;
+  width: 345px;
   flex-wrap: wrap;
   align-items: flex-start;
   row-gap: 11px;
