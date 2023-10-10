@@ -82,10 +82,12 @@
 
 .blog-articles {
   padding-top: 175px;
-  padding-bottom: 96px;
   display: grid;
   grid-template-columns: 799px 345px;
   gap: 52px;
+}
+.blog-articles__article {
+  padding-bottom: 96px;
 }
 .blog-articles__title {
   color: #292f36;
@@ -99,7 +101,8 @@
 .blog-articles__img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 50px;
-  padding-bottom: 26px;
+  margin-bottom: 26px;
+  width: 799px;
 }
 .blog-articles__sticker {
   display: flex;
