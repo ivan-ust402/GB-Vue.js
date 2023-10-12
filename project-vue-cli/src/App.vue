@@ -1,7 +1,7 @@
 <template>
   <HeaderComponent />
-  <!-- <HomepageComponent /> -->
-  <!-- <ArticlesAndNewsComponent /> -->
+  <HomepageComponent />
+  <ArticlesAndNewsComponent />
   <BlogDetailsComponent />
   <FooterComponent />
 </template>

@@ -2,11 +2,13 @@
     <footer class="footer center">
       <div class="footer__content">
         <div class="footer__description">
-          <img
+          <a href="#" class="footer__link-logo">
+            <img
             :src="require('@/assets/img/homepage/Logo.svg')"
             alt="Logo"
             class="footer__logo"
           />
+          </a>
           <p class="footer__text">
             It is a long established fact that a reader will be distracted
             lookings.
