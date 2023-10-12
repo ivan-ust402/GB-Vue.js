@@ -1,7 +1,8 @@
 <template>
   <HeaderComponent />
   <!-- <HomepageComponent /> -->
-  <ArticlesAndNewsComponent />
+  <!-- <ArticlesAndNewsComponent /> -->
+  <BlogDetailsComponent />
   <FooterComponent />
 </template>
 
@@ -10,6 +11,8 @@ import HomepageComponent from './components/HomepageComponent.vue';
 import ArticlesAndNewsComponent from './components/ArticlesAndNewsComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import BlogDetailsComponent from './components/BlogDetailsComponent.vue';
+
 export default {
   name: 'App',
   components: {
@@ -17,6 +20,7 @@ export default {
     FooterComponent,
     HomepageComponent,
     ArticlesAndNewsComponent,
+    BlogDetailsComponent
   }
 }
 </script>
