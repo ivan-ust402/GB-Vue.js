@@ -2,11 +2,11 @@
   <main class="blog-intro center"></main>
   <div class="blog-articles center">
     <div class="blog-articles__articles">
-      <BlogArticleComponent
+      <BlogArticleBlock
         v-for="article in filterArticles"
         :key="article.id"
         :article="article"
-      ></BlogArticleComponent>
+      ></BlogArticleBlock>
     </div>
     <div class="blog-articles__tabs-block">
       <h3 class="blog-articles__tabs-title">Tags</h3>
@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import BlogArticleComponent from "./BlogArticleComponent.vue";
-import BlogTagComponent from "./BlogTagComponent.vue";
+import BlogArticleBlock from "../blocks/BlogArticleBlock";
+import BlogTagComponent from "../components/tags/BlogTagComponent";
 export default {
   data() {
     return {
@@ -384,7 +384,7 @@ export default {
   },
   components: {
     BlogTagComponent,
-    BlogArticleComponent,
+    BlogArticleBlock,
   },
   methods: {
     addClassActive() {
@@ -415,4 +415,171 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.blog-intro {
+  background-image: url("../assets/img/blog-details/Backgound-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  //   background-size: cover;
+  height: 351px;
+}
+
+.blog-articles {
+  padding-top: 175px;
+  display: grid;
+  grid-template-columns: 799px 345px;
+  gap: 52px;
+
+  &__article {
+    padding-bottom: 96px;
+  }
+  &__title {
+    color: #292f36;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+    padding-bottom: 11px;
+  }
+  &__img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 50px;
+    margin-bottom: 26px;
+    width: 799px;
+  }
+  &__sticker {
+    display: flex;
+    gap: 409px;
+    padding-top: 20px;
+    padding-bottom: 39px;
+  }
+  &__date {
+    color: #4d5053;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+  &__category {
+    color: #4d5053;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
+  &__text {
+    color: #4d5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    padding-top: 9px;
+  }
+  &__quote {
+    border-radius: 50px;
+    background: #f4f0ec;
+    display: flex;
+    width: 799px;
+    padding: 53px 227px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 267px;
+    box-sizing: border-box;
+    margin-top: 35px;
+    margin-bottom: 27px;
+  }
+  &__quote-title {
+    width: 375px;
+    color: #cda274;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+  }
+  &__quote-title-span {
+    color: #cda274;
+    text-align: center;
+    font-size: 200px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 125%; /* 250px */
+    letter-spacing: 4px;
+  }
+
+  &__list {
+    list-style-type: none;
+    color: #4d5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  &__list-item {
+    padding-bottom: 32px;
+  }
+
+  &__list-item-index {
+    color: #cda274;
+    font-family: "DM Serif Display";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    letter-spacing: 0.4px;
+  }
+
+  &__tabs-title {
+    color: #292f36;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+  }
+  &__tabs {
+    display: flex;
+    width: 345px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 11px;
+    column-gap: 10px;
+  }
+  &__tab-button {
+    // display: flex;
+    padding: 9px 30px;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #f4f0ec;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 22.5px */
+    letter-spacing: 0.36px;
+    &_active {
+      background: #292f36;
+      color: #fff;
+    }
+  }
+}
+</style>
