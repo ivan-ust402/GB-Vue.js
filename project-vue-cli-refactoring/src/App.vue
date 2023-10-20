@@ -1,6 +1,7 @@
 <template>
   <HeaderBlock />
-  <HomepagePage />
+  <!-- <HomepagePage /> -->
+  <ArticlesAndNewsPage />
   <FooterBlock />
 </template>
 
@@ -8,7 +9,7 @@
 import HeaderBlock from "./blocks/HeaderBlock";
 import FooterBlock from "./blocks/FooterBlock";
 import HomepagePage from "./pages/HomepagePage";
-
+import ArticlesAndNewsPage from "./pages/ArticlesAndNewsPage"
 
 export default {
   name: "App",
@@ -16,6 +17,7 @@ export default {
     HeaderBlock,
     FooterBlock,
     HomepagePage,
+    ArticlesAndNewsPage,
 },
 }
 </script>
