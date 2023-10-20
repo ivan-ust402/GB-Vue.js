@@ -1,9 +1,6 @@
 <template>
   <div>
-    <button class="circle-button" v-if="value">
-      {{ value }}
-    </button>
-    <button class="circle-button" v-else>
+    <button class="circle-button">
       <svg
         width="9"
         height="16"
@@ -25,9 +22,6 @@
 
 <script>
 export default {
-  props: {
-    value: Number,
-  },
 }
 </script>
 
