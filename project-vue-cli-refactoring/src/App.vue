@@ -1,29 +1,21 @@
 <template>
-  <!-- <CircleButtonComponent />
-  <PaginationButtonComponent :value="10" />
-  <DefaultRectangleButtonComponent :value="'Get started'" />
-  <PrimaryRectangleButtonComponent /> -->
-  <HeaderComponent />
-  <FooterComponent />
+  <HeaderBlock />
+  <HomepagePage />
+  <FooterBlock />
 </template>
 
 <script>
-import CircleButtonComponent from "./components/buttons/CircleButtonComponent.vue"
-import DefaultRectangleButtonComponent from "./components/buttons/DefaultRectangleButtonComponent.vue";
-import PaginationButtonComponent from "./components/buttons/PaginationButtonComponent.vue"
-import PrimaryRectangleButtonComponent from "./components/buttons/PrimaryRectangleButtonComponent.vue";
-import HeaderComponent from "./blocks/HeaderComponent.vue";
-import FooterComponent from "./blocks/FooterComponent.vue";
+import HeaderBlock from "./blocks/HeaderBlock";
+import FooterBlock from "./blocks/FooterBlock";
+import HomepagePage from "./pages/HomepagePage";
+
 
 export default {
   name: "App",
   components: {
-    CircleButtonComponent,
-    PaginationButtonComponent,
-    DefaultRectangleButtonComponent,
-    PrimaryRectangleButtonComponent,
-    HeaderComponent,
-    FooterComponent,
+    HeaderBlock,
+    FooterBlock,
+    HomepagePage,
 },
 }
 </script>
