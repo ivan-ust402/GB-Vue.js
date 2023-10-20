@@ -136,6 +136,7 @@
   line-height: 150%; /* 33px */
   letter-spacing: 0.22px;
   padding-top: 9px;
+  /* white-space: pre-wrap; */
 }
 .blog-articles__quote {
   border-radius: 50px;

@@ -31,7 +31,7 @@
             formattedPrice() {
                 return `$${this.product.price}`;
             },
-        }
+        },
     }
 </script>
 

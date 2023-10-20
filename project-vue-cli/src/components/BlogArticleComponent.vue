@@ -22,6 +22,11 @@
     >
       {{ text }}
     </p>
+    <!-- <p
+      class="blog-articles__text"
+      v-html="article.textMain"
+    >
+    </p> -->
     <div class="blog-articles__quote">
       <svg
         width="74"
