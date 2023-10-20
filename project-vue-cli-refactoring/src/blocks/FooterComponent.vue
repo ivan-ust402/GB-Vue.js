@@ -44,14 +44,7 @@
             </a>
           </div>
         </div>
-        <nav class="footer__nav">
-          <h3 class="footer__nav-title">Pages</h3>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item" v-for="(navName, index) in navNames" :key="index">
-              <a href="#" class="footer__nav-link">{{ navName }}</a>
-            </li>
-          </ul>
-        </nav>
+        <FooterNavComponent :title="'Pages'" :values="navNames" />
         <div class="footer__empty"></div>
         <div class="footer-contact">
           <h3 class="footer__contact-title">Contact</h3>
@@ -65,7 +58,12 @@
 </template>
 
 <script>
+import FooterNavComponent from '../components/navs/FooterNavComponent.vue';
+
 export default {
+  components: {
+    FooterNavComponent,
+  },
     data() {
         return {
             navNames: ['Home', 'Projects', 'Blog']
@@ -115,30 +113,7 @@ export default {
     padding-right: 101px;
   } */
 
-  &__nav-title {
-    color: #292f36;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 31.25px */
-    padding-bottom: 9px;
-  }
 
-  &__nav-item {
-    list-style-type: none;
-  }
-  &__nav-link {
-    color: #4d5053;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 300%; /* 66px */
-    letter-spacing: 0.22px;
-    transition: all 0.3s ease-in;
-    &:hover {
-      color: #cda274;
-    }
-  }
 
   &__contact-title {
     color: #292f36;
