@@ -1,26 +1,58 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CircleButtonComponent/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import CircleButtonComponent from './components/buttons/CircleButtonComponent.vue';
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    CircleButtonComponent,
   }
 }
 </script>
 
 <style lang="scss">
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  $colorPrimary1: #CDA274;
+  $colorPrimary2: #292F36;
+  $colorPrimary3: #F4F0EC;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Jost", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "DM Serif Display", serif;
+  }
+
+  a,
+  button {
+    font-family: "Jost", sans-serif;
+    text-decoration: none;
+  }
+
+  a:hover,
+  button:hover {
+    cursor: pointer;
+  }
+
+  input {
+    font-family: "Jost", sans-serif;
+  }
+
+  .center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+  }
 }
 </style>
