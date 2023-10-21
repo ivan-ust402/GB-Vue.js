@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import PrimaryCircleButtonComponent from "../buttons/PrimaryCircleButtonComponent.vue"
+import PrimaryCircleButtonComponent from "../buttons/PrimaryCircleButtonComponent.vue";
 
 export default {
   components: {
@@ -59,22 +59,7 @@ export default {
   display: flex;
   gap: 20px;
   justify-content: center;
-  padding-top: 51px;
-  padding-bottom: 104px;
-  //   &__link {
-  //     width: 52px;
-  //     height: 52px;
-  //     border-radius: 50%;
-  //     border: 1px solid #cda274;
-  //     background-color: #fff;
-  //     transition: all 0.3s ease-in;
-  //     &:hover {
-  //       background-color: #f4f0ec;
-  //     }
-  //     &_active {
-  //       background-color: #f4f0ec;
-  //       border: none;
-  //     }
-  //   }
+  // padding-top: 51px;
+  // padding-bottom: 104px;
 }
 </style>

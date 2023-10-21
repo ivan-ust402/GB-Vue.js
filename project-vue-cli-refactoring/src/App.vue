@@ -8,12 +8,13 @@
 </template>
 
 <script>
+
 import HeaderBlock from "./blocks/HeaderBlock";
 import FooterBlock from "./blocks/FooterBlock";
 import HomepagePage from "./pages/HomepagePage";
 import ArticlesAndNewsPage from "./pages/ArticlesAndNewsPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
-import ProjectsPage from "./pages/ProjectsPage.vue"
+import ProjectsPage from "./pages/ProjectsPage.vue";
 
 
 export default {
