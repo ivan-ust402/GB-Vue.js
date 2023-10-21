@@ -2,7 +2,8 @@
   <HeaderBlock />
   <!-- <HomepagePage /> -->
   <!-- <ArticlesAndNewsPage /> -->
-  <BlogDetailsPage />
+  <!-- <BlogDetailsPage /> -->
+  <ProjectsPage />
   <FooterBlock />
 </template>
 
@@ -12,6 +13,7 @@ import FooterBlock from "./blocks/FooterBlock";
 import HomepagePage from "./pages/HomepagePage";
 import ArticlesAndNewsPage from "./pages/ArticlesAndNewsPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
+import ProjectsPage from "./pages/ProjectsPage.vue"
 
 
 export default {
@@ -22,6 +24,7 @@ export default {
     HomepagePage,
     ArticlesAndNewsPage,
     BlogDetailsPage,
+    ProjectsPage,
 },
 }
 </script>
