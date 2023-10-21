@@ -67,43 +67,22 @@
             </div>
           </div>
         </div>
-        <div class="articles__pagination">
-          <button
-            class="articles__pagination-link articles__pagination-link_active"
-            active
-          >
-            01
-          </button>
-          <button class="articles__pagination-link">02</button>
-          <button class="articles__pagination-link">03</button>
-          <button class="articles__pagination-link">
-            <svg
-              width="9"
-              height="16"
-              viewBox="0 0 9 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
+        
+        <PaginationComponent />
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import IntroBlock from "@/blocks/IntroBlock.vue"
+import IntroBlock from "@/blocks/IntroBlock.vue";
+import PaginationComponent from "@/components/pagination/PaginationComponent.vue"
 
 export default {
-  components: { IntroBlock },
+  components: { 
+    IntroBlock,
+    PaginationComponent,
+  },
   data() {
     return {
       settings: {
@@ -249,27 +228,6 @@ export default {
       background-color: #fffafa;
     }
   }
-  &__pagination {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding-top: 51px;
-    padding-bottom: 104px;
-  }
-  &__pagination-link {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: 1px solid #cda274;
-    background-color: #fff;
-    transition: all 0.3s ease-in;
-    &:hover {
-      background-color: #f4f0ec;
-    }
-    &_active {
-      background-color: #f4f0ec;
-      border: none;
-    }
-  }
+  
 }
 </style>

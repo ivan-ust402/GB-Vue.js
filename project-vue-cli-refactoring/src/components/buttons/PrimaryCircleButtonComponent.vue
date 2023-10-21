@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <button class="pagination-button" v-if="value">
+    <button 
+      class="button"
+      v-if="value" 
+      >
       {{ getValue }}
     </button>
-    <button class="pagination-button" v-else>
+    <button class="button" v-else @click="nextPage">
       <svg
         width="9"
         height="16"
@@ -20,46 +22,50 @@
         />
       </svg>
     </button>
-  </div>
 </template>
 
 <script>
 export default {
   props: {
-    value: Number,
-    default: () => null,
+    value: {
+      type: Number,
+      default: () => null,
+    },
   },
   computed: {
     getValue() {
-        if (Number(this.value) < 10) {
-            return `0${this.value}`;
-        }
-        return this.value;
-    }
-  }
+      if (Number(this.value) < 10) {
+        return `0${this.value}`
+      }
+      return this.value
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.pagination-button {
+.button {
   width: 52px;
   height: 52px;
-  border-radius: 50%;
   border: 1px solid #cda274;
   background-color: #fff;
-  transition: all 0.3s ease-in;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
   color: #292f36;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 24px */
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     background-color: #f4f0ec;
   }
   &_active {
-    background-color: #f4f0ec;
     border: none;
+    background-color: #f4f0ec;
   }
 }
 </style>
