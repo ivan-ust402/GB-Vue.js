@@ -47,5 +47,9 @@ export default {
     color: #151616;
     background-color: #f3ece5;
   }
+  &_active:hover {
+    color: #fff;
+    background: #cda274;
+  }
 }
 </style>

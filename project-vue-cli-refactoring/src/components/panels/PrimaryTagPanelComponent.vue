@@ -1,11 +1,14 @@
 <template>
   <div class="tag-panel__wrapper">
     <div class="tag-panel">
-    <PrimaryTagComponent />
-    <PrimaryTagComponent :class="{ tag_active: true }" />
-    <PrimaryTagComponent />
-    <PrimaryTagComponent />
-  </div>
+      <PrimaryTagComponent
+        :class="{ tag_active: currentTag === chapter }"
+        v-for="(chapter, index) in chapters"
+        :key="index"
+        :value="chapter"
+        @click="changeTag(chapter)"
+      />
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,19 @@ import PrimaryTagComponent from "../tags/PrimaryTagComponent.vue"
 export default {
   components: {
     PrimaryTagComponent,
+  },
+  data() {
+    return {
+      chapters: ["Bathroom", "Bedroom", "Kitchen", "Living Room"],
+      currentTag: "Bathroom",
+    }
+  },
+  emits: ['my-tag-changed'],
+  methods: {
+    changeTag(tag) {
+      this.currentTag = tag;
+      this.$emit('my-tag-changed', tag);
+    },
   },
 }
 </script>

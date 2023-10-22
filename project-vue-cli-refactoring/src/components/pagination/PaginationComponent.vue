@@ -4,7 +4,7 @@
       v-for="(page, index) in getQuantityOfPages"
       :key="index"
       :value="page"
-      :class="{ button_active: currentPage === page }"
+      :class="{ button_active: numberOfPage === page }"
       @click="changePage(page)"
     />
     <PrimaryCircleButtonComponent @click="nextPage" />
@@ -27,8 +27,12 @@ export default {
       type: Number,
       default: () => 8,
     },
+    numberOfPage: {
+      type: Number,
+      default: () => 1,
+    }
   },
-  emits: {},
+  emits: ['page-changed'],
   data() {
     return {
       currentPage: 1,
@@ -36,19 +40,20 @@ export default {
   },
   computed: {
     getQuantityOfPages() {
-      return Math.ceil(this.total / this.quantityElPerPage)
+      return Math.ceil(this.total / this.quantityElPerPage);
     },
   },
   methods: {
     changePage(pageNumber) {
-      this.currentPage = pageNumber
-      // this.$emit('pageChanged', pageNumber);
+      this.currentPage = pageNumber;
+      this.$emit('page-changed', pageNumber);
     },
     nextPage() {
+      this.currentPage = this.numberOfPage;
       if (this.currentPage < this.getQuantityOfPages) {
         this.currentPage += 1;
         this.changePage(this.currentPage);
-      }
+      } 
     },
   },
 }
