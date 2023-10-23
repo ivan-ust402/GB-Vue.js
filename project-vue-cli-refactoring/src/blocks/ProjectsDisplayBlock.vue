@@ -7,6 +7,7 @@
           v-for="(projectCard, index) in chapterProjectCardsPerPage"
           :key="projectCard.id"
           :settings="projectCard"
+          @add-favorites="addFavoritesMarker"
         />
       </div>
       <PaginationComponent
@@ -283,6 +284,10 @@ export default {
           end
         )
       }
+    },
+    addFavoritesMarker(findId, isFavorite) {
+      this.projectCards.find(el => el.id === findId).isFavorite = isFavorite;
+
     },
   },
 }
