@@ -80,6 +80,7 @@ export default {
           imgSrc: "",
           title: "Project card title",
           category: "Project category / Project Category",
+          isFavorite: false,
         }
       },
     },

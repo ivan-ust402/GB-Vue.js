@@ -2,14 +2,15 @@
   <section class="projects-display center">
     <PrimaryTagPanelComponent @my-tag-changed="tagChanged" />
     <div class="projects-display__content">
-      <div class="projects-display__cards">
-        <ProjectCardBlock
-          v-for="(projectCard, index) in chapterProjectCardsPerPage"
-          :key="projectCard.id"
-          :settings="projectCard"
-          @add-favorites="addFavoritesMarker"
-        />
-      </div>
+      <MasonryWall :items="chapterProjectCardsPerPage" :column-width="585" :gap="30" class="projects-display__cards">
+        <template #default="{ item, index }">
+          <ProjectCardBlock
+            :key="item.id"
+            :settings="item"
+            @add-favorites="addFavoritesMarker"
+          />        
+        </template>
+      </MasonryWall>
       <PaginationComponent
         :total="countAllElements"
         :quantityElPerPage="countElOfPage"
@@ -25,6 +26,7 @@ import DefaultCircleButtonComponent from "@/components/buttons/DefaultCircleButt
 import PaginationComponent from "@/components/pagination/PaginationComponent.vue"
 import PrimaryTagPanelComponent from "@/components/panels/PrimaryTagPanelComponent.vue"
 import ProjectCardBlock from "./ProjectCardBlock.vue"
+import MasonryWall from "@yeger/vue-masonry-wall"
 
 export default {
   components: {
@@ -32,6 +34,7 @@ export default {
     PrimaryTagPanelComponent,
     DefaultCircleButtonComponent,
     ProjectCardBlock,
+    MasonryWall,
   },
   data() {
     return {
@@ -270,7 +273,7 @@ export default {
       this.loadListOfElOnPage(this.numberOfPage)
     },
     loadListOfElOnPage(pageNumber) {
-      this.numberOfPage = pageNumber;
+      this.numberOfPage = pageNumber
       const start = (pageNumber - 1) * this.countElOfPage
       const end = start + this.countElOfPage
       if (this.countAllElements < end) {
@@ -286,8 +289,7 @@ export default {
       }
     },
     addFavoritesMarker(findId, isFavorite) {
-      this.projectCards.find(el => el.id === findId).isFavorite = isFavorite;
-
+      this.projectCards.find((el) => el.id === findId).isFavorite = isFavorite
     },
   },
 }
@@ -298,52 +300,8 @@ export default {
   padding-top: 200px;
   padding-bottom: 200px;
   &__cards {
-    // display: grid;
-    // grid-template-columns: repeat(2, 585px);
-    display: flex;
-    flex-flow: column wrap;
     padding-top: 61px;
     padding-bottom: 61px;
-    max-height: 3500px;
-    gap: 30px;
-  }
-}
-
-.card {
-  width: 585px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 585px;
-
-  &__description-block {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 24px;
-    align-items: center;
-  }
-
-  &__title {
-    color: #292f36;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 31.25px */
-    letter-spacing: 0.5px;
-  }
-  &__category {
-    color: #4d5053;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 33px */
-    letter-spacing: 0.22px;
-  }
-  &:nth-child(2n + 1) {
-    order: 1;
-  }
-  &:nth-child(2n + 2) {
-    order: 2;
   }
 }
 </style>
