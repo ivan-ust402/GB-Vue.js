@@ -3,7 +3,8 @@
   <!-- <HomepagePage /> -->
   <!-- <ArticlesAndNewsPage /> -->
   <!-- <BlogDetailsPage /> -->
-  <ProjectsPage />
+  <!-- <ProjectsPage /> -->
+  <ProjectDetailsPage />
   <FooterBlock />
 </template>
 
@@ -15,6 +16,7 @@ import HomepagePage from "./pages/HomepagePage";
 import ArticlesAndNewsPage from "./pages/ArticlesAndNewsPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import ProjectsPage from "./pages/ProjectsPage.vue";
+import ProjectDetailsPage from "./pages/ProjectDetailsPage.vue";
 
 
 export default {
@@ -26,6 +28,7 @@ export default {
     ArticlesAndNewsPage,
     BlogDetailsPage,
     ProjectsPage,
+    ProjectDetailsPage
 },
 }
 </script>
