@@ -1,20 +1,9 @@
-import {createStore} from 'vuex';
+import { createStore } from 'vuex';
+import projectDetails from './modules/project-details-store'
 
 
 export default createStore({
-    state: {
-        test: 0,
-    },
-    mutations: {
-
-    },
-    getters: {
-
-    },
-    actions: {
-
-    },
     modules: {
-
+        projectDetails,
     }
 });
