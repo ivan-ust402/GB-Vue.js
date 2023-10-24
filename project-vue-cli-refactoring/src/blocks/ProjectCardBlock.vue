@@ -135,9 +135,9 @@ export default {
   &__image {
     position: relative;
     
-    // &:hover path {
-    //   fill: #ffa928;
-    // }
+    &:hover path {
+      fill: #ffa928;
+    }
     &:active path {
       fill:#ff9c06; 
     }
