@@ -14,11 +14,15 @@
         <h2 class="project-details__title">{{ getTitle }}</h2>
         <p class="project-details__text" v-html="getHTMLText"></p>
       </div>
-      <div class="project-details__slider">
+      <SliderProjectDetailsBlock />
+      <!-- <div class="project-details__slider">
         <swiper
           :style="{
-            '--swiper-navigation-color': '#fff',
-            '--swiper-pagination-color': '#fff',
+            '--swiper-navigation-color': '#cda274',
+            '--swiper-slide-object-fit': 'auto',
+            '--swiper-pagination-color': '#cda274',
+            '--swiper-pagination-bullet-size': '25px',
+            '--swiper-pagination-bullet-inactive-opacity': '0.6',
           }"
           :zoom="true"
           :navigation="true"
@@ -27,66 +31,113 @@
           }"
           :modules="modules"
           class="mySwiper"
+          @zoom-change="changeToggle"
         >
-          <swiper-slide v-for="(img, index) in getImgSrcArr" :key="index">
+          <swiper-slide
+            class="slide"
+            :class="{ 'slide_dblclick': getClassToggle }"
+            v-for="(img, index) in getImgSrcArr"
+            :key="index"
+          >
             <div class="swiper-zoom-container">
-              <img 
-                :src="require(`@/assets/${img}`)" 
+              <img
+                :src="require(`@/assets/${img}`)"
                 :style="{
                   width: '1200px',
-                  height: '800px', 
+                  height: '800px',
                   borderRadius: '70px',
-                }" 
+                  objectFit: 'cover',
+                }"
               />
+              <LoupeComponent class="slide__loupe" />
             </div>
-            {{}}
           </swiper-slide>
         </swiper>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
 import IntroBlock from "@/blocks/IntroBlock.vue"
-import { mapGetters } from "vuex"
-import { Swiper, SwiperSlide } from "swiper/vue"
-import "swiper/css"
-import "swiper/css/zoom"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import { Zoom, Navigation, Pagination } from "swiper/modules"
+import { mapGetters, mapActions } from "vuex"
+import SliderProjectDetailsBlock from "@/blocks/SliderProjectDetailsBlock.vue"
+// import { Swiper, SwiperSlide } from "swiper/vue"
+// import "swiper/css"
+// import "swiper/css/zoom"
+// import "swiper/css/navigation"
+// import "swiper/css/pagination"
+// import { Zoom, Navigation, Pagination } from "swiper/modules"
+// import LoupeComponent from "../components/icons/LoupeComponent"
 
 export default {
   components: {
     IntroBlock,
-    Swiper,
-    SwiperSlide,
+    SliderProjectDetailsBlock,
+    // Swiper,
+    // SwiperSlide,
+    // LoupeComponent,
   },
   computed: {
-    ...mapGetters(["getTitle", "getHTMLText", "getImgSrcArr"]),
+    ...mapGetters([
+      "getTitle",
+      "getHTMLText",
+      // "getImgSrcArr",
+      // "getClassToggle",
+    ]),
   },
-  setup() {
-    return {
-      modules: [Zoom, Navigation, Pagination],
-    }
+  methods: {
+    ...mapActions(["changeToggle"]),
   },
+  // setup() {
+  //   return {
+  //     modules: [Zoom, Navigation, Pagination],
+  //   }
+  // },
 }
 </script>
 
 <style lang="scss" scoped>
-.swiper {
-  width: 100%;
-  height: 100%;
-}
+// .mySwiper {
+//   height: 950px;
+// }
+// .swiper-pagination-bullet {
+//   border: 1px solid black;
+// }
+// .slide {
+//   position: relative;
+//   &__loupe {
+//     position: absolute;
+//     top: auto;
+//     left: auto;
+//     bottom: auto;
+//     right: auto;
+//     opacity: 0;
+//     transition: all 0.3s ease-in-out;
+//   }
+// }
 
-.swiper-slide {
-  overflow: hidden;
-}
+// .slide_dblclick {
+//   position: relative;
+//   &__loupe {
+//     position: absolute;
+//     top: auto;
+//     left: auto;
+//     bottom: auto;
+//     right: auto;
+//     opacity: 0;
+//     transition: all 0.3s ease-in-out;
+//     }
+//     &:hover .slide__loupe {
+//       opacity: 1;
+//     }
+//   }
 .project-details {
-  &__slider {
-    width: 100%;
-  }
+  // &__slider {
+  //   width: 100%;
+  //   position: relative;
+  // }
+
   &__content {
     padding-top: 174px;
     padding-bottom: 108px;

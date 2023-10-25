@@ -19,10 +19,13 @@ export default {
                     ]
                 }
             ],
+            classToggle: true,
         }
     },
     mutations: {
-
+        CHANGE_TOGGLE(state) {
+            state.classToggle = !state.classToggle;
+        }
     },
     getters: {
         getTitle(state) {
@@ -34,8 +37,13 @@ export default {
         getImgSrcArr(state) {
             return state.projectContent[0].imgSrcArr;
         },
+        getClassToggle(state) {
+            return state.classToggle;
+        }
     },
     actions: {
-
+        changeToggle(context) {
+            context.commit('CHANGE_TOGGLE');
+        }
     }
 };

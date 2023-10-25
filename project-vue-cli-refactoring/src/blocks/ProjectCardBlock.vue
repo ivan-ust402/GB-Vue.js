@@ -136,7 +136,7 @@ export default {
     position: relative;
     
     &:hover path {
-      fill: #ffa928;
+      fill: #ff9c06;
     }
     &:active path {
       fill:#ff9c06; 
