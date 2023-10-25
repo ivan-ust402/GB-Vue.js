@@ -8,15 +8,14 @@ export default {
                     <br><br>
                     In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.`,
                     imgSrcArr: [
-                        '@/assets/img/project-details/0.jpg',
-                        '@/assets/img/project-details/1.jpg',
-                        '@/assets/img/project-details/2.jpg',
-                        '@/assets/img/project-details/3.jpg',
-                        '@/assets/img/project-details/4.jpg',
-                        '@/assets/img/project-details/5.jpg',
-                        '@/assets/img/project-details/6.jpg',
-                        '@/assets/img/project-details/7.jpg',
-                        '@/assets/img/project-details/8.jpg',
+                        'img/project-details/0.jpg',
+                        'img/project-details/1.1.jpg',
+                        'img/project-details/2.2.jpg',
+                        'img/project-details/3.3.jpg',
+                        'img/project-details/4.4.jpg',
+                        'img/project-details/5.5.jpg',
+                        'img/project-details/6.6.jpg',
+                        'img/project-details/7.7.jpg',                          
                     ]
                 }
             ],
