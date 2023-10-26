@@ -4,9 +4,9 @@
       :style="{
         '--swiper-navigation-color': '#cda274',
         '--swiper-slide-object-fit': 'auto',
-        '--swiper-pagination-color': '#cda274',
-        '--swiper-pagination-bullet-size': '25px',
-        '--swiper-pagination-bullet-inactive-opacity': '0.6',
+        // '--swiper-pagination-color': '#cda274',
+        // '--swiper-pagination-bullet-size': '25px',
+        // '--swiper-pagination-bullet-inactive-opacity': '0.6',
       }"
       :zoom="true"
       :navigation="true"
@@ -96,7 +96,5 @@ export default {
     }
 }
 }
-// .swiper-pagination-bullet {
-//   border: 1px solid black;
-// }
+
 </style>

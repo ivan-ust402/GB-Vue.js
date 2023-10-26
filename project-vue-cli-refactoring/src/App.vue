@@ -79,5 +79,17 @@ input {
 #app {
   font-family: "Jost", sans-serif;
 }
+.swiper-pagination-bullet {
+  border: 1px solid #4d5053;
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+  background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #cda274;
+
+}
 
 </style>
