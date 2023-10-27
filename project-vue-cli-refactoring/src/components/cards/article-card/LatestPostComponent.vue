@@ -1,45 +1,24 @@
 <template>
-  <div class="latest-article__card-border">
-    <div class="latest-article__card">
+  <div class="latest-article-card">
+    <div class="latest-article-card__card">
       <img
-        :src="require(`@/assets/img/${getLatestPost.imgSrc}`)"
+        :src="require(`@/assets/img/${settings.imgSrc}`)"
         alt="article photo"
-        class="latest-article__card-img"
+        class="latest-article-card__img"
       />
-      <div class="latest-article__card-content">
-        <h3 class="articles__card-title">
-          {{ getLatestPost.titleHTML }}
+      <div class="latest-article-card__content">
+        <h3 class="latest-article-card__title">
+          {{ settings.title }}
         </h3>
-        <div class="articles__card-text-container">
-          <p class="articles__card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
-            alias fugiat nemo molestias esse!
-          </p>
-
-          <p class="articles__card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat,
-            distinctio nulla quia eius quidem facilis?
-          </p>
+        <div class="latest-article-card__text-container">
+          <p
+            class="latest-article-card__text"
+            v-html="settings.descriptionHTML"
+          ></p>
         </div>
-        <div class="articles__card-footer">
-          <p class="articles__card-date">26 December,2022</p>
-          <button class="articles__card-button">
-            <svg
-              width="9"
-              height="16"
-              viewBox="0 0 9 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
+        <div class="latest-article-card__footer">
+          <p class="latest-article-card__date">{{ settings.date }}</p>
+          <DefaultCircleButtonComponent />
         </div>
       </div>
     </div>
@@ -47,53 +26,92 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
+import { mapGetters } from "vuex"
+import DefaultCircleButtonComponent from "@/components/buttons/DefaultCircleButtonComponent.vue"
 
 export default {
-computed: {
-    ...mapGetters(['getLatestPost']),
-}
+  props: {
+    settings: {
+      type: Object,
+      default: () => {
+        return {
+          imgSrc: "articles/article-1.png",
+          title: "Low Cost Latest Invented Interior Designing Ideas.",
+          date: "22 December,2022 ",
+          descriptionHTML:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?",
+        }
+      },
+    },
+  },
+  components: {
+    DefaultCircleButtonComponent,
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.latest-article {
-  padding-top: 200px;
-  padding-bottom: 54px;
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-  &__title {
-    color: #292f36;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 62.5px */
-    letter-spacing: 1px;
-  }
-  &__card-border {
-    border-radius: 62px;
-    border: 1px solid #e7e7e7;
-    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
-    padding: 22px;
-    transition: all 0.3s ease-in;
-    &:hover {
-      background-color: #eaeaea;
-      cursor: pointer;
-    }
+.latest-article-card {
+  border-radius: 62px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+  padding: 22px;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
   }
   &__card {
     display: flex;
     gap: 65px;
     align-items: center;
   }
-  &__card-img {
+  &__img {
     border-radius: 50px;
+    width: 569px;
+    height: 478px;
   }
-
-  &__card-content {
+  &__content {
     width: 489px;
+  }
+  &__title {
+    color: #292f36;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 31.25px */
+    letter-spacing: 0.5px;
+    width: 463px;
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    margin-top: 22px;
+    margin-bottom: 41px;
+    width: 463px;
+  }
+  &__text {
+    color: #4d5053;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__date {
+    color: #4d5053;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
   }
 }
 </style>

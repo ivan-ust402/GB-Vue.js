@@ -8,7 +8,7 @@ export default {
           figCaption: "Kitchan Design",
           title: "Let’s Get Solution For Building Construction Work",
           date: "26 December,2022",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         {
           id: 1,
@@ -16,7 +16,7 @@ export default {
           figCaption: "Living Design",
           title: "Low Cost Latest Invented Interior Designing Ideas.",
           date: "22 December,2022",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         {
           id: 2,
@@ -24,7 +24,7 @@ export default {
           figCaption: "Interior Design",
           title: "Best For Any Office & Business Interior Solution",
           date: "25 December,2022",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         {
           id: 3,
@@ -32,7 +32,7 @@ export default {
           figCaption: "Kitchan Design",
           title: "Let’s Get Solution For Building Construction Work",
           date: "26 December,2022",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         {
           id: 4,
@@ -40,7 +40,7 @@ export default {
           figCaption: "Living Design",
           title: "Low Cost Latest Invented Interior Designing Ideas.",
           date: "22 December,2022 ",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         {
           id: 5,
@@ -48,15 +48,15 @@ export default {
           figCaption: "Interior Design",
           title: "Best For Any Office & Business Interior Solution",
           date: "22 December,2022",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         {
           id: 6,
           imgSrc: "articles/article-7.png",
           figCaption: "Kitchan Design",
-          title: "Let’s Get Solution For Building Construction Work",
+          title: "Low Cost Latest Invented Interior Designing Ideas",
           date: "26 December,2022",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.<br><br>Lorem Ipsum is not simply random text. It has roots in a piece of classica',
         },
         {
           id: 7,
@@ -64,7 +64,7 @@ export default {
           figCaption: "Interior Design",
           title: "Best For Any Office & Business Interior Solution",
           date: "22 December,2022 ",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         {
           id: 8,
@@ -72,7 +72,7 @@ export default {
           figCaption: "Living Design",
           title: "Low Cost Latest Invented Interior Designing Ideas.",
           date: "22 December,2022 ",
-          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
+          descriptionHTML: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga alias fugiat nemo molestias esse!<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, distinctio nulla quia eius quidem facilis?',
         },
         
       ],

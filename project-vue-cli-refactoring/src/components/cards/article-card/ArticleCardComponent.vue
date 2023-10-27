@@ -110,8 +110,6 @@ export default {
     letter-spacing: 0.5px;
     width: 290px;
     height: 93px;
-    display: flex;
-    justify-content: flex-start;
   }
   &__text-container {
     display: flex;
