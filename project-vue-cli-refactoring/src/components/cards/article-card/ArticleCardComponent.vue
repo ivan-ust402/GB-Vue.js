@@ -12,7 +12,7 @@
         </figcaption>
       </figure>
       <div class="article-card__description">
-        <h3 class="article-card__title" v-html="settings.titleHTML"></h3>
+        <h3 class="article-card__title" v-html="getFormattedTitle"></h3>
         <div class="article-card__footer">
           <p class="article-card__date">{{ settings.date }}</p>
           <DefaultCircleButtonComponent />
@@ -34,15 +34,27 @@ export default {
       type: Object,
       default: () => {
         return {
-          imgSrc: "",
+          imgSrc: "articles/article-1.png",
           figCaption: "Kitchan Design",
-          title: "Let’s Get Solution For Building Construction ",
-          titleSpan: "Work",
+          title: "Let’s Get Solution For Building Construction Work ",
           date: "26 December,2022",
         }
       },
     },
   },
+  data() {
+    return {
+      title: this.getFormattedTitle,
+    }
+  },
+  computed: {
+    getFormattedTitle() {
+      const titleArr = this.settings.title.split(' ');
+      const lastEl = titleArr[titleArr.length - 1];
+      const firstSrting = titleArr.slice(0, titleArr.length- 1).join(' ');
+      return `${firstSrting}<br>${lastEl}`
+    }
+  }
 }
 </script>
 
@@ -96,10 +108,10 @@ export default {
     font-weight: 400;
     line-height: 125%; /* 31.25px */
     letter-spacing: 0.5px;
-    width: 305px;
-    &_span {
-      display: block;
-    }
+    width: 290px;
+    height: 93px;
+    display: flex;
+    justify-content: flex-start;
   }
   &__text-container {
     display: flex;
