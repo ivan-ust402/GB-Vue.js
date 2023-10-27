@@ -4,7 +4,8 @@
   <!-- <ArticlesAndNewsPage /> -->
   <!-- <BlogDetailsPage /> -->
   <!-- <ProjectsPage /> -->
-  <ProjectDetailsPage />
+  <!-- <ProjectDetailsPage /> -->
+  <NotFound />
   <FooterBlock />
 </template>
 
@@ -17,6 +18,7 @@ import ArticlesAndNewsPage from "./pages/ArticlesAndNewsPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import ProjectsPage from "./pages/ProjectsPage.vue";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage.vue";
+import NotFound from "./blocks/NotFound.vue";
 
 
 export default {
@@ -28,7 +30,8 @@ export default {
     ArticlesAndNewsPage,
     BlogDetailsPage,
     ProjectsPage,
-    ProjectDetailsPage
+    ProjectDetailsPage,
+    NotFound
 },
 }
 </script>
