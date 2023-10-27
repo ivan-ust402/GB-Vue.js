@@ -1,6 +1,12 @@
 <template>
   <main class="intro center">
-    <div class="intro__box-content">
+    <div
+      class="intro__box-content"
+      :style="{
+        backgroundImage:
+          'url(' + require(`@/assets/img/${settings.backgroundImgUrl}`) + ')',
+      }"
+    >
       <div class="intro__content">
         <h1 class="intro__title">{{ settings.title }}</h1>
         <p class="intro__text">
@@ -28,6 +34,7 @@ export default {
           title: "Let Your Home Be Unique",
           text: "There are many variations of the passages of lorem Ipsum fromavailable, majority.",
           buttonText: "Get Started",
+          backgroundImgUrl: "homepage/intro-background.png",
         }
       },
     },
@@ -38,7 +45,6 @@ export default {
 <style lang="scss" scoped>
 .intro {
   &__box-content {
-    background-image: url("../assets/img/homepage/intro-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 55px;

@@ -1,11 +1,5 @@
 <template>
   <HeaderBlock />
-  <!-- <HomepagePage /> -->
-  <!-- <ArticlesAndNewsPage /> -->
-  <!-- <BlogDetailsPage /> -->
-  <!-- <ProjectsPage /> -->
-  <!-- <ProjectDetailsPage /> -->
-  <!-- <NotFoundPage /> -->
   <router-view></router-view>
   <FooterBlock />
 </template>
@@ -13,12 +7,7 @@
 <script>
 import HeaderBlock from "./blocks/HeaderBlock";
 import FooterBlock from "./blocks/FooterBlock";
-import HomepagePage from "./pages/HomepagePage";
-import ArticlesAndNewsPage from "./pages/ArticlesAndNewsPage";
-import BlogDetailsPage from "./pages/BlogDetailsPage";
-import ProjectsPage from "./pages/ProjectsPage.vue";
-import ProjectDetailsPage from "./pages/ProjectDetailsPage.vue";
-import NotFoundPage from "./pages/NotFoundPage.vue";
+
 
 
 export default {
@@ -26,12 +15,6 @@ export default {
   components: {
     HeaderBlock,
     FooterBlock,
-    HomepagePage,
-    ArticlesAndNewsPage,
-    BlogDetailsPage,
-    ProjectsPage,
-    ProjectDetailsPage,
-    NotFoundPage
 },
 }
 </script>

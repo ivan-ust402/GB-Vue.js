@@ -1,51 +1,6 @@
 <template>
   <MainIntroBlock />
-  <section class="projects center">
-    <div class="projects__main-info">
-      <h2 class="projects__title">Follow Our Projects</h2>
-      <p class="projects__text">
-        It is a long established fact that a reader will be distracted by the of
-        readable content of page lookings at its layouts points.
-      </p>
-    </div>
-    <div class="projects__cards">
-      <div
-        class="projects__card"
-        v-for="(projectCard, index) in projectCards"
-        :key="index"
-      >
-        <img
-          :src="projectCard.imgSrc"
-          alt="project image"
-          class="projects__card-image"
-          :class="projectCard.extraClass"
-        />
-        <div class="projects__card-content">
-          <div class="projects__card-description">
-            <h3 class="projects__card-title">{{ projectCard.title }}</h3>
-            <p class="projects__card-category">{{ projectCard.category }}</p>
-          </div>
-          <button class="projects__card-button">
-            <svg
-              width="10"
-              height="20"
-              viewBox="0 0 10 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 19L9 10L1 1"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+  <HomepageProjectsBlock />
   <div class="achivements center">
     <div class="achivements__block">
       <div
@@ -121,6 +76,7 @@
 </template>
 
 <script>
+import HomepageProjectsBlock from "@/blocks/homepage/HomepageProjectsBlock.vue";
 import MainIntroBlock from "../blocks/MainIntroBlock.vue"
 
 export default {
@@ -142,32 +98,6 @@ export default {
         {
           title: "95",
           text: "Happy CUstomers",
-        },
-      ],
-      projectCards: [
-        {
-          imgSrc: require("@/assets/img/homepage/project-1.png"),
-          title: "Modern Kitchan",
-          category: "Decor / Artchitecture",
-          extraClass: "projects__card-image_right-top-border",
-        },
-        {
-          imgSrc: require("@/assets/img/homepage/project-2.png"),
-          title: "Modern Kitchan",
-          category: "Decor / Artchitecture",
-          extraClass: "projects__card-image_left-top-border",
-        },
-        {
-          imgSrc: require("@/assets/img/homepage/project-3.png"),
-          title: "Modern Kitchan",
-          category: "Decor / Artchitecture",
-          extraClass: "projects__card-image_right-bottom-border",
-        },
-        {
-          imgSrc: require("@/assets/img/homepage/project-4.png"),
-          title: "Modern Kitchan",
-          category: "Decor / Artchitecture",
-          extraClass: "projects__card-image_left-bottom-border",
         },
       ],
       articles: [
@@ -195,118 +125,11 @@ export default {
       ],
     }
   },
-  components: { MainIntroBlock },
+  components: { MainIntroBlock, HomepageProjectsBlock },
 }
 </script>
 
 <style lang="scss" scoped>
-.projects {
-  padding-top: 93px;
-  padding-bottom: 96px;
-  &__main-info {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
-  &__title {
-    color: #292f36;
-    text-align: center;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    // line-height: 125%; /* 62.5px */
-    letter-spacing: 1px;
-  }
-  &__text {
-    color: #4d5053;
-    text-align: center;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    // line-height: 150%; /* 33px */
-    letter-spacing: 0.22px;
-    width: 737px;
-    margin-bottom: 93px;
-  }
-
-  &__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 550px);
-    column-gap: 100px;
-    row-gap: 56px;
-  }
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  &__card-image {
-    width: 550px;
-    &_right-top-border {
-      border-top-right-radius: 55px;
-    }
-    &_left-top-border {
-      border-top-left-radius: 55px;
-    }
-    &_right-bottom-border {
-      border-bottom-right-radius: 55px;
-    }
-    &_left-bottom-border {
-      border-bottom-left-radius: 55px;
-    }
-  }
-
-  &__card-content {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__card-description {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  &__card-title {
-    color: #292f36;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    // line-height: 125%; /* 31.25px */
-    letter-spacing: 0.5px;
-  }
-
-  &__card-category {
-    color: #4d5053;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    // line-height: 150%; /* 33px */
-    letter-spacing: 0.22px;
-  }
-
-  &__card-button {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: none;
-    background-color: #f4f0ec;
-    transition: all 0.3s ease-in;
-    &:hover {
-      background-color: #eaeaea;
-    }
-  }
-}
-
 .achivements {
   padding-top: 151px;
   padding-bottom: 151px;

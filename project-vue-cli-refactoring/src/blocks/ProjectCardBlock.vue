@@ -4,7 +4,7 @@
       <img :src="settings.imgSrc" />
       <svg
         class="card__star-icon"
-        :class="{'card__star-icon_active': isFavorite}"
+        :class="{ 'card__star-icon_active': isFavorite }"
         xmlns="http://www.w3.org/2000/svg"
         width="36"
         height="35"
@@ -61,7 +61,12 @@
         <h3 class="card__title">{{ settings.title }}</h3>
         <p class="card__category">{{ settings.category }}</p>
       </div>
-      <DefaultCircleButtonComponent />
+      <DefaultCircleButtonComponent
+        :settings="{
+          width: '70px',
+          height: '70px',
+        }"
+      />
     </div>
   </div>
 </template>
@@ -70,7 +75,7 @@
 import DefaultCircleButtonComponent from "@/components/buttons/DefaultCircleButtonComponent.vue"
 
 export default {
-  emits: ['add-favorites'],
+  emits: ["add-favorites"],
   components: { DefaultCircleButtonComponent },
   props: {
     settings: {
@@ -93,10 +98,10 @@ export default {
   },
   methods: {
     toggleFavorites() {
-      this.isFavorite = !this.isFavorite;
-      this.$emit('add-favorites', this.id, this.isFavorite);
-    }
-  }
+      this.isFavorite = !this.isFavorite
+      this.$emit("add-favorites", this.id, this.isFavorite)
+    },
+  },
 }
 </script>
 
@@ -134,12 +139,12 @@ export default {
 
   &__image {
     position: relative;
-    
+
     &:hover path {
       fill: #ff9c06;
     }
     &:active path {
-      fill:#ff9c06; 
+      fill: #ff9c06;
     }
   }
 
@@ -150,7 +155,7 @@ export default {
     path {
       fill: none;
     }
-    &_active path{
+    &_active path {
       fill: #ffa928;
     }
   }
@@ -160,6 +165,5 @@ export default {
   &:nth-child(2n + 2) {
     order: 2;
   }
-
 }
 </style>
