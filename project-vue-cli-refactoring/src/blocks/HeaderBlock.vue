@@ -1,27 +1,27 @@
 <template>
   <header class="header center">
-    <a href="#" class="header__link-logo">
+    <router-link to="/" class="header__link-logo">
       <img
         :src="require('@/assets/img/icons/Logo.svg')"
         alt="logo"
         class="header__logo"
       />
-    </a>
-    <HeaderNavComponent :values="navNames"/>
+    </router-link>
+    <HeaderNavComponent :linkSettings="getNavLinks" />
   </header>
 </template>
 
 <script>
-import HeaderNavComponent from '../components/navs/HeaderNavComponent' 
+import { mapGetters } from "vuex";
+import HeaderNavComponent from "../components/navs/HeaderNavComponent";
+
 export default {
-    components: {
-      HeaderNavComponent,
-    },
-    data() {
-        return {
-            navNames: ['Home', 'Project', 'Blog']
-        }
-    }
+  components: {
+    HeaderNavComponent,
+  },
+  computed: {
+    ...mapGetters(['getNavLinks']),
+  }
 }
 </script>
 
@@ -32,6 +32,5 @@ export default {
   align-items: center;
   padding-top: 53px;
   padding-bottom: 55px;
-
 }
 </style>

@@ -6,7 +6,9 @@
         <p class="intro__text">
           {{ settings.text }}
         </p>
-        <DefaultRectangleButtonComponent :value="settings.buttonText" />
+        <router-link to="/projects">
+          <DefaultRectangleButtonComponent :value="settings.buttonText" />
+        </router-link>
       </div>
     </div>
   </main>
@@ -23,8 +25,8 @@ export default {
       type: Object,
       default: () => {
         return {
-          title: 'Let Your Home Be Unique',
-          text: 'There are many variations of the passages of lorem Ipsum fromavailable, majority.',
+          title: "Let Your Home Be Unique",
+          text: "There are many variations of the passages of lorem Ipsum fromavailable, majority.",
           buttonText: "Get Started",
         }
       },

@@ -7,10 +7,12 @@
           We are sorry, but the page you requested was not found
         </h4>
       </div>
-      <DefaultRectangleButtonComponent
+      <router-link to="/">
+        <DefaultRectangleButtonComponent
         :value="'Back To Home'"
         class="notfound__button"
       />
+      </router-link>
     </div>
     <div class="notfound__img-block">
       <img :src="require('@/assets/img/notfound/NotFound.jpg')" alt="Not found picture" class="notfound__img" />
@@ -33,7 +35,7 @@ export default { components: { DefaultRectangleButtonComponent } }
   &__description-block {
     display: flex;
     flex-direction: column;
-    gap: 23px;
+    gap: 40px;
     width: 569px;
     
   }
@@ -58,7 +60,6 @@ export default { components: { DefaultRectangleButtonComponent } }
     line-height: 150%; /* 52.5px */
     letter-spacing: 0.35px;
   }
-  &__button {}
   &__img-block {
     margin-right: -360px;
   }

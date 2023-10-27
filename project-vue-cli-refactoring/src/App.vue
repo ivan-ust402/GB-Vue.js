@@ -5,12 +5,12 @@
   <!-- <BlogDetailsPage /> -->
   <!-- <ProjectsPage /> -->
   <!-- <ProjectDetailsPage /> -->
-  <NotFound />
+  <!-- <NotFoundPage /> -->
+  <router-view></router-view>
   <FooterBlock />
 </template>
 
 <script>
-
 import HeaderBlock from "./blocks/HeaderBlock";
 import FooterBlock from "./blocks/FooterBlock";
 import HomepagePage from "./pages/HomepagePage";
@@ -18,7 +18,7 @@ import ArticlesAndNewsPage from "./pages/ArticlesAndNewsPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import ProjectsPage from "./pages/ProjectsPage.vue";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage.vue";
-import NotFound from "./blocks/NotFound.vue";
+import NotFoundPage from "./pages/NotFoundPage.vue";
 
 
 export default {
@@ -31,7 +31,7 @@ export default {
     BlogDetailsPage,
     ProjectsPage,
     ProjectDetailsPage,
-    NotFound
+    NotFoundPage
 },
 }
 </script>
