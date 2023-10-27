@@ -12,27 +12,10 @@
         </figcaption>
       </figure>
       <div class="article-card__description">
-        <h3 class="article-card__title" v-html="settings.titleHTML ">
-        </h3>
+        <h3 class="article-card__title" v-html="settings.titleHTML"></h3>
         <div class="article-card__footer">
           <p class="article-card__date">{{ settings.date }}</p>
-          <!-- <button class="article-card__button">
-            <svg
-              width="9"
-              height="16"
-              viewBox="0 0 9 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.77199 14.9527L7.71484 8.26698L1.77199 1.58127"
-                stroke="#292F36"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button> -->
+          <DefaultCircleButtonComponent />
         </div>
       </div>
     </div>
@@ -40,7 +23,12 @@
 </template>
 
 <script>
+import DefaultCircleButtonComponent from "@/components/buttons/DefaultCircleButtonComponent.vue"
+
 export default {
+  components: {
+    DefaultCircleButtonComponent,
+  },
   props: {
     settings: {
       type: Object,
@@ -141,17 +129,6 @@ export default {
     line-height: 150%; /* 24px */
     letter-spacing: 0.16px;
     text-transform: capitalize;
-  }
-  &__button {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: none;
-    background-color: #f4f0ec;
-    transition: all 0.3s ease-in;
-    &:hover {
-      background-color: #fffafa;
-    }
   }
 }
 </style>
