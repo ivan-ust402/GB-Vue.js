@@ -1,13 +1,16 @@
 <template>
-  <main class="articles-intro center">
-    <div class="articles-intro__content">
-      <h1 class="articles-intro__title">Articles & News</h1>
-      <p class="articles-intro__pointer">Home / Blog</p>
-    </div>
-  </main>
+  <IntroBlock
+    :style="{
+      'background-image':
+        'url(' +
+        require('@/assets/img/background/intro/articles&newsIntro.jpg') +
+        ')',
+    }"
+    :settings="settings"
+  />
   <section class="latest-article center">
     <h2 class="latest-article__title">Latest Post</h2>
-    <LatestPostComponent :settings="getLatestPost"/>
+    <LatestPostComponent :settings="getLatestPost" />
   </section>
   <section class="articles center">
     <div class="articles__main-info">
@@ -60,11 +63,25 @@
 <script>
 import ArticleCardComponent from "@/components/cards/article-card/ArticleCardComponent.vue"
 import LatestPostComponent from "@/components/cards/article-card/LatestPostComponent.vue"
+import IntroBlock from "@/blocks/intro/IntroBlock.vue"
 
 import { mapGetters } from "vuex"
 
 export default {
-  components: { ArticleCardComponent, LatestPostComponent },
+  components: {
+    ArticleCardComponent,
+    LatestPostComponent,
+    IntroBlock,
+  },
+  data() {
+    return {
+      settings: {
+        hasTitle: true,
+        title: "Articles & News",
+        category: "Home / Blog",
+      },
+    }
+  },
   computed: {
     ...mapGetters(["getBlogArticles", "getLatestPost"]),
   },
@@ -72,44 +89,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.articles-intro {
-  background-image: url("../assets/img/articles/Main-background.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  //   background-size: cover;
-  display: flex;
-  justify-content: center;
-
-  &__content {
-    width: 503px;
-    padding: 41px 78px;
-    background-color: #fff;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top-right-radius: 41px;
-    border-top-left-radius: 41px;
-    margin-top: 178px;
-  }
-
-  &__title {
-    color: #292f36;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 62.5px */
-  }
-  &__pointer {
-    color: #4d5053;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 33px */
-    letter-spacing: 0.22px;
-  }
-}
 .latest-article {
   padding-top: 200px;
   padding-bottom: 54px;

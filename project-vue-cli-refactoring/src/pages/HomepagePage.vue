@@ -7,7 +7,7 @@
 
 <script>
 import HomepageProjectsBlock from "@/blocks/homepage/HomepageProjectsBlock.vue"
-import MainIntroBlock from "../blocks/MainIntroBlock.vue"
+import MainIntroBlock from "@/blocks/intro/MainIntroBlock.vue"
 import HomepageAchivementsBlock from "@/blocks/homepage/HomepageAchivementsBlock.vue"
 import HomepageArticlesBlock from "@/blocks/homepage/HomepageArticlesBlock.vue"
 

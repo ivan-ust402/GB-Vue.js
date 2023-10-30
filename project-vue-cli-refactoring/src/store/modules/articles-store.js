@@ -79,6 +79,11 @@ export default {
       latestPostId: 6,
     }
   },
+  mutations: {
+    CHANGE_LATEST_POST(state, id) {
+      state.latestPostId = id;
+    }
+  },
   getters: {
     getHomepageArticles(state) {
       return state.articles.slice(0, 3);
@@ -88,6 +93,11 @@ export default {
     },
     getLatestPost(state) {
       return state.articles.find(el => el.id === state.latestPostId)
-    }
+    },
   },
+  actions: {
+    changeLatestPost(context, id) {
+      context.commit('CHANGE_LATEST_POST', id);
+    }
+  }
 }

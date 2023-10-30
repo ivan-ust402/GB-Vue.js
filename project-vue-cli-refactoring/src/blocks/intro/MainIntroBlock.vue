@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import DefaultRectangleButtonComponent from "../components/buttons/DefaultRectangleButtonComponent"
+import DefaultRectangleButtonComponent from "@/components/buttons/DefaultRectangleButtonComponent"
 export default {
   components: {
     DefaultRectangleButtonComponent,

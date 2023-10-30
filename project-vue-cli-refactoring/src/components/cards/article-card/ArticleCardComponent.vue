@@ -15,7 +15,7 @@
         <h3 class="article-card__title" v-html="getFormattedTitle"></h3>
         <div class="article-card__footer">
           <p class="article-card__date">{{ settings.date }}</p>
-          <DefaultCircleButtonComponent />
+          <DefaultCircleButtonComponent @click="changeLatestPost(settings.id)"/>
         </div>
       </div>
     </div>
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex"
 import DefaultCircleButtonComponent from "@/components/buttons/DefaultCircleButtonComponent.vue"
 
 export default {
@@ -34,6 +35,7 @@ export default {
       type: Object,
       default: () => {
         return {
+          id: 7,
           imgSrc: "articles/article-1.png",
           figCaption: "Kitchan Design",
           title: "Let’s Get Solution For Building Construction Work ",
@@ -54,7 +56,10 @@ export default {
       const firstSrting = titleArr.slice(0, titleArr.length- 1).join(' ');
       return `${firstSrting}<br>${lastEl}`
     }
-  }
+  },
+  methods: {
+  ...mapActions(['changeLatestPost']),
+  },
 }
 </script>
 

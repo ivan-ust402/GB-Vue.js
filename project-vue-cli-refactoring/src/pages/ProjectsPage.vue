@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import IntroBlock from "@/blocks/IntroBlock.vue"
+import IntroBlock from "@/blocks/intro/IntroBlock.vue"
 import ProjectsDisplayBlock from "@/blocks/ProjectsDisplayBlock.vue"
 
 export default {
