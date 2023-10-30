@@ -20,9 +20,10 @@
 </template>
 
 <script>
-import IntroBlock from "@/blocks/IntroBlock.vue"
+import IntroBlock from "@/blocks/intro/IntroBlock.vue"
 import { mapGetters, mapActions } from "vuex"
 import SliderProjectDetailsBlock from "@/blocks/SliderProjectDetailsBlock.vue"
+import { useHead } from "@vueuse/head"
 
 export default {
   components: {
@@ -38,6 +39,17 @@ export default {
   methods: {
     ...mapActions(["changeToggle"]),
   },
+  setup() {
+    useHead({
+      title: 'Project Details',
+      meta: [
+        {
+          name: "project details",
+          content: "description of our projects",
+        },
+      ],
+    })
+  }
 }
 </script>
 

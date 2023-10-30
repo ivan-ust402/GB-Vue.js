@@ -61,12 +61,14 @@
         <h3 class="card__title">{{ settings.title }}</h3>
         <p class="card__category">{{ settings.category }}</p>
       </div>
-      <DefaultCircleButtonComponent
+      <router-link :to="{name: 'ProjectDetails', id: settings.id}">
+        <DefaultCircleButtonComponent
         :settings="{
           width: '70px',
           height: '70px',
         }"
       />
+      </router-link>
     </div>
   </div>
 </template>

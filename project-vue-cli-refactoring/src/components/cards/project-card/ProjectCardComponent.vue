@@ -12,59 +12,62 @@
           <h3 class="project-card__title">{{ cardContent.title }}</h3>
           <p class="project-card__category">{{ cardContent.category }}</p>
         </div>
-        <DefaultCircleButtonComponent
-          :settings="{
-            width: '70px',
-            height: '70px',
-          }"
-        />
+        <router-link :to="{name: 'ProjectDetails', id: cardContent.id}">
+          <DefaultCircleButtonComponent
+            :settings="{
+              width: '70px',
+              height: '70px',
+            }"
+          />
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import DefaultCircleButtonComponent from '@/components/buttons/DefaultCircleButtonComponent.vue';
+import DefaultCircleButtonComponent from "@/components/buttons/DefaultCircleButtonComponent.vue"
 
 export default {
-    components: { DefaultCircleButtonComponent },
-    props: {
-        cardContent: {
-            type: Object,
-            default: () => {
-                return {
-                    title: 'Default title',
-                    category: 'Default category',
-                    extraClass: '',
-                    imgSrc: '#',
-                }
-            }
-        },
-        index: {
-            type: Number,
-            default: () => 0,
+  components: { DefaultCircleButtonComponent },
+  props: {
+    cardContent: {
+      type: Object,
+      default: () => {
+        return {
+          id: 0,
+          title: "Default title",
+          category: "Default category",
+          extraClass: "",
+          imgSrc: "#",
         }
+      },
     },
-    computed: {
-        getExtraClass() {
-            switch (this.index) {
-                case 0:
-                    return 'project-card__image_right-top-border';
-                    break;
-                case 1:
-                    return 'project-card__image_left-top-border';
-                    break;
-                case 2:
-                    return 'project-card__image_right-bottom-border';
-                    break;
-                case 3:
-                    return 'project-card__image_left-bottom-border';
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
+    index: {
+      type: Number,
+      default: () => 0,
+    },
+  },
+  computed: {
+    getExtraClass() {
+      switch (this.index) {
+        case 0:
+          return "project-card__image_right-top-border"
+          break
+        case 1:
+          return "project-card__image_left-top-border"
+          break
+        case 2:
+          return "project-card__image_right-bottom-border"
+          break
+        case 3:
+          return "project-card__image_left-bottom-border"
+          break
+        default:
+          break
+      }
+    },
+  },
 }
 </script>
 

@@ -22,8 +22,10 @@
 </template>
 
 <script>
-import BlogArticleBlock from "../blocks/BlogArticleBlock";
-import BlogTagComponent from "../components/tags/BlogTagComponent";
+import BlogArticleBlock from "../blocks/BlogArticleBlock"
+import BlogTagComponent from "../components/tags/BlogTagComponent"
+import { useHead } from "@vueuse/head"
+
 export default {
   data() {
     return {
@@ -42,7 +44,7 @@ export default {
           tag: "Kitchen",
           title: "Let’s Get Solution for Building",
           titleSpan: "Construction Work",
-          imgSrcMain: require('@/assets/img/blog-details/blog-img-1.png'),
+          imgSrcMain: require("@/assets/img/blog-details/blog-img-1.png"),
           altMain: "Kitchen photo",
           date: "26 December,2022",
           category: "Interior / Home / Decore",
@@ -85,7 +87,7 @@ export default {
               `,
             },
           ],
-          imgSrcAdditional: require('@/assets/img/blog-details/blog-img-2.png'),
+          imgSrcAdditional: require("@/assets/img/blog-details/blog-img-2.png"),
           altAdditional: "Kitchen photo",
           thirdText: `
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -99,7 +101,7 @@ export default {
           tag: "Bedroom",
           title: "Let’s Get Solution for Building",
           titleSpan: "Construction Work",
-          imgSrcMain: require('@/assets/img/blog-details/blog-img-3.jpg'),
+          imgSrcMain: require("@/assets/img/blog-details/blog-img-3.jpg"),
           altMain: "Kitchen photo",
           date: "26 December,2022",
           category: "Interior / Home / Decore",
@@ -142,7 +144,7 @@ export default {
                 `,
             },
           ],
-          imgSrcAdditional: require('@/assets/img/blog-details/blog-img-4.jpg'),
+          imgSrcAdditional: require("@/assets/img/blog-details/blog-img-4.jpg"),
           altAdditional: "Kitchen photo",
           thirdText: `
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -156,7 +158,7 @@ export default {
           tag: "Building",
           title: "Let’s Get Solution for Building",
           titleSpan: "Construction Work",
-          imgSrcMain: require('@/assets/img/blog-details/blog-img-5.jpg'),
+          imgSrcMain: require("@/assets/img/blog-details/blog-img-5.jpg"),
           altMain: "Kitchen photo",
           date: "26 December,2022",
           category: "Interior / Home / Decore",
@@ -199,7 +201,7 @@ export default {
                 `,
             },
           ],
-          imgSrcAdditional: require('@/assets/img/blog-details/blog-img-6.jpg'),
+          imgSrcAdditional: require("@/assets/img/blog-details/blog-img-6.jpg"),
           altAdditional: "Kitchen photo",
           thirdText: `
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -213,7 +215,7 @@ export default {
           tag: "Architecture",
           title: "Let’s Get Solution for Building",
           titleSpan: "Construction Work",
-          imgSrcMain: require('@/assets/img/blog-details/blog-img-7.jpg'),
+          imgSrcMain: require("@/assets/img/blog-details/blog-img-7.jpg"),
           altMain: "Kitchen photo",
           date: "26 December,2022",
           category: "Interior / Home / Decore",
@@ -256,7 +258,7 @@ export default {
                 `,
             },
           ],
-          imgSrcAdditional: require('@/assets/img/blog-details/blog-img-8.jpg'),
+          imgSrcAdditional: require("@/assets/img/blog-details/blog-img-8.jpg"),
           altAdditional: "Kitchen photo",
           thirdText: `
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -270,7 +272,7 @@ export default {
           tag: "Kitchen Planning",
           title: "Let’s Get Solution for Building",
           titleSpan: "Construction Work",
-          imgSrcMain: require('@/assets/img/blog-details/blog-img-9.jpg'),
+          imgSrcMain: require("@/assets/img/blog-details/blog-img-9.jpg"),
           altMain: "Kitchen photo",
           date: "26 December,2022",
           category: "Interior / Home / Decore",
@@ -313,7 +315,7 @@ export default {
                 `,
             },
           ],
-          imgSrcAdditional: require('@/assets/img/blog-details/blog-img-10.jpg'),
+          imgSrcAdditional: require("@/assets/img/blog-details/blog-img-10.jpg"),
           altAdditional: "Kitchen photo",
           thirdText: `
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -327,7 +329,7 @@ export default {
           tag: "Bathroom",
           title: "Let’s Get Solution for Building",
           titleSpan: "Construction Work",
-          imgSrcMain: require('@/assets/img/blog-details/blog-img-11.jpg'),
+          imgSrcMain: require("@/assets/img/blog-details/blog-img-11.jpg"),
           altMain: "Kitchen photo",
           date: "26 December,2022",
           category: "Interior / Home / Decore",
@@ -370,7 +372,7 @@ export default {
                 `,
             },
           ],
-          imgSrcAdditional: require('@/assets/img/blog-details/blog-img-12.jpg'),
+          imgSrcAdditional: require("@/assets/img/blog-details/blog-img-12.jpg"),
           altAdditional: "Kitchen photo",
           thirdText: `
                 Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
@@ -411,6 +413,15 @@ export default {
         )
       }
     },
+  },
+  setup() {
+    useHead({
+      title: "Blog Details",
+      meta: [{
+        name: 'blog details',
+        content: 'there are best design practices and relevant articles'
+      }]
+    })
   },
 }
 </script>

@@ -22,8 +22,22 @@
 
 <script>
 import DefaultRectangleButtonComponent from "@/components/buttons/DefaultRectangleButtonComponent.vue"
+import { useHead } from "@vueuse/head"
 
-export default { components: { DefaultRectangleButtonComponent } }
+export default { 
+  components: { DefaultRectangleButtonComponent },
+  setup() {
+    useHead({
+      title: '404: not found!',
+      meta: [
+        {
+          name: 'not found page',
+          content: 'This page is not found!'
+        }
+      ]
+    })
+  }  
+}
 </script>
 
 <style lang="scss" scoped>

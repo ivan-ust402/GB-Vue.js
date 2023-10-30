@@ -16,6 +16,7 @@
 <script>
 import IntroBlock from "@/blocks/intro/IntroBlock.vue"
 import ProjectsDisplayBlock from "@/blocks/ProjectsDisplayBlock.vue"
+import { useHead } from "@vueuse/head"
 
 export default {
   components: {
@@ -31,6 +32,17 @@ export default {
       },
     }
   },
+  setup() {
+    useHead({
+      title: 'Projects',
+      meta: [
+        {
+          name: "our projects",
+          content: "our projects are presented here",
+        },
+      ],
+    })
+  }
 }
 </script>
 

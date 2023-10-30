@@ -1,12 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '@/pages/HomepagePage';
 import BlogPage from '@/pages/ArticlesAndNewsPage';
-import BlogDetailsPage from '@/pages/BlogDetailsPage';
 import ProjectsPage from '@/pages/ProjectsPage';
-// import ProjectDetailsPage from '@/pages/ProjectDetailsPage';
 import NotFoundPage from '@/pages/NotFoundPage';
-// import BlogDetailsPage from '@/pages/BlogDetailsPage';
-// import ProjectDetailsPage from '@/pages/ProjectDetailsPage';
+import BlogDetailsPage from '@/pages/BlogDetailsPage';
+import ProjectDetailsPage from '@/pages/ProjectDetailsPage';
 
 const routes = [
   {
@@ -19,11 +17,11 @@ const routes = [
     name: 'Projects',
     component: ProjectsPage,
   },
-  // {
-  //   path: '/project-details/:id?',
-  //   name: 'ProjectDetails',
-  //   component: ProjectDetailsPage,
-  // },
+  {
+    path: '/project-details/:id?',
+    name: 'ProjectDetails',
+    component: ProjectDetailsPage,
+  },
   {
     path: '/blog/:pageNumber?',
     name: 'Blog',
@@ -47,7 +45,10 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router

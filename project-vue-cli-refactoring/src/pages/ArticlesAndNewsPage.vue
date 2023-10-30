@@ -31,6 +31,7 @@ import ArticleCardComponent from "@/components/cards/article-card/ArticleCardCom
 import LatestPostComponent from "@/components/cards/article-card/LatestPostComponent.vue"
 import IntroBlock from "@/blocks/intro/IntroBlock.vue"
 import { mapGetters } from "vuex"
+import { useHead } from "@vueuse/head"
 
 export default {
   components: {
@@ -50,6 +51,17 @@ export default {
   },
   computed: {
     ...mapGetters(["getLatestPost"]),
+  },
+  setup() {
+    useHead({
+      title: "Blog",
+      meta: [
+        {
+          name: "design blog",
+          content: "there are articles and news about design solutions in the interior of a house or apartment",
+        },
+      ],
+    })
   },
 }
 </script>
