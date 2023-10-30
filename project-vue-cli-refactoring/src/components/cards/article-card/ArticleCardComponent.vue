@@ -15,7 +15,9 @@
         <h3 class="article-card__title" v-html="getFormattedTitle"></h3>
         <div class="article-card__footer">
           <p class="article-card__date">{{ settings.date }}</p>
-          <DefaultCircleButtonComponent @click="changeLatestPost(settings.id)"/>
+          <router-link :to="{name: 'blogDetails', id: settings.id}">
+            <DefaultCircleButtonComponent @click="changeLatestPost(settings.id)"/>
+          </router-link>
         </div>
       </div>
     </div>
@@ -100,6 +102,8 @@ export default {
   }
   &__image {
     border-radius: 45px 45px 0px 0px;
+    width: 340px;
+    height: 290px;
   }
   &__description {
     display: flex;

@@ -18,7 +18,10 @@
         </div>
         <div class="latest-article-card__footer">
           <p class="latest-article-card__date">{{ settings.date }}</p>
-          <DefaultCircleButtonComponent />
+          <router-link :to="{name: 'blogDetails', id: settings.id}">
+            <DefaultCircleButtonComponent />
+          </router-link>
+          
         </div>
       </div>
     </div>

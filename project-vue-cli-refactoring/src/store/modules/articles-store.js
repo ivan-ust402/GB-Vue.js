@@ -77,11 +77,16 @@ export default {
         
       ],
       latestPostId: 6,
+      itemsPerPage: 6,
+      currentPageNumber: 1,
     }
   },
   mutations: {
     CHANGE_LATEST_POST(state, id) {
       state.latestPostId = id;
+    },
+    CHANGE_CURRENT_PAGE(state, pageNumber) {
+      state.currentPageNumber = pageNumber;
     }
   },
   getters: {
@@ -94,10 +99,25 @@ export default {
     getLatestPost(state) {
       return state.articles.find(el => el.id === state.latestPostId)
     },
+    getTotalPages(state) {
+      return Math.ceil(state.articles.length / state.itemsPerPage);
+    },
+    getPageArticles(state) {
+      const pageNumber = state.currentPageNumber;
+      const startIndex = (pageNumber - 1) * state.itemsPerPage;
+      const endIndex = startIndex + state.itemsPerPage;
+      return state.articles.slice(startIndex, endIndex);
+    },
+    getCurrentPageNumber(state) {
+      return state.currentPageNumber;
+    }
   },
   actions: {
     changeLatestPost(context, id) {
       context.commit('CHANGE_LATEST_POST', id);
+    },
+    changeCurrentPageNumber(context, currentPage) {
+      context.commit('CHANGE_CURRENT_PAGE', currentPage)
     }
   }
 }
