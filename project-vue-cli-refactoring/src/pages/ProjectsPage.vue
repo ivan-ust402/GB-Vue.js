@@ -1,5 +1,4 @@
 <template>
-  <div class="projects">
     <IntroBlock
       :style="{
         'background-image':
@@ -10,7 +9,6 @@
       :settings="settings"
     />
     <ProjectsDisplayBlock />
-  </div>
 </template>
 
 <script>

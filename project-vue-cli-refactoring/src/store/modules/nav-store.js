@@ -10,7 +10,7 @@ export default {
         {
           id: 1,
           name: "Projects",
-          url: "/projects",
+          url: "/projects",  
         },
         {
           id: 2,
