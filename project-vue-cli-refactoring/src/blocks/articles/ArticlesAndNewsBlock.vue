@@ -11,7 +11,7 @@
       <router-link
         v-for="page in getTotalPages"
         :key="page"
-        :to="{url: `${getPageLink(page)}`, hash: '#articles'}"
+        :to="{path: `${getPageLink(page)}`, hash: '#articles'}"
       >
         <PrimaryCircleButtonComponent
           :value="page"

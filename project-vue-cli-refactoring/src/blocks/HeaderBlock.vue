@@ -1,5 +1,5 @@
 <template>
-  <header class="header center">
+  <header class="header center" id="header">
     <router-link to="/" class="header__link-logo">
       <img
         :src="require('@/assets/img/icons/Logo.svg')"

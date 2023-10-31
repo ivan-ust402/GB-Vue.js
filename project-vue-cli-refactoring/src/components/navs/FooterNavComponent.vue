@@ -9,7 +9,7 @@
           :key="objSettings.id"
         >
           <router-link 
-            :to="objSettings.url" 
+            :to="{path: objSettings.url, hash: '#header'}" 
             class="footer__nav-link"
             >
               {{ objSettings.name }}
