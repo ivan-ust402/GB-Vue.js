@@ -12,7 +12,7 @@
     <h2 class="latest-article__title">Latest Post</h2>
     <LatestPostComponent :settings="getLatestPost" />
   </section>
-  <section class="articles center">
+  <section class="articles center" id="articles">
     <div class="articles__main-info">
       <h2 class="articles__title">Articles & News</h2>
       <p class="articles__text">

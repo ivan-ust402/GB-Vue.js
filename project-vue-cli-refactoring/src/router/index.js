@@ -47,9 +47,13 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    return savedPosition || new Promise((resolve) => {
-      setTimeout(() => resolve({top: 0, behavior: 'smooth'}), 300)
-    })
+    if (to.hash) {
+      return new Promise((resolve) => {
+        setTimeout(() => resolve({el: to.hash, behavior: 'smooth'}), 10)
+      })
+    } else {
+      return savedPosition || {top: 0, behavior: 'smooth'}
+    }
   }
 })
 
