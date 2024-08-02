@@ -14,27 +14,27 @@ Interno is my first educational project written on the VueJS framework, using th
 
 ## Visual display of the application's operation (Визуальное отображение функциональности или экранов приложения)
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-  <div style="text-align: center; max-width: 500px;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 500px;">
     <img src="src/assets/img/projectDescription/homepage.png"/>
     <p><b>Picture 1.</b> Homepage.</p>
   </div>
-  <div style="text-align: center; max-width: 500px;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 500px;">
     <img src="src/assets/img/projectDescription/blogPage.png"/>
     <p><b>Picture 2.</b> Blog page.</p>
   </div>
-  <div style="text-align: center;  max-width: 500px;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 500px;">
     <img src="src/assets/img/projectDescription/blogDetailsPage.png"/>
     <p><b>Picture 3.</b> Blog details page.</p>
   </div>
-  <div style="text-align: center;  max-width: 500px;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 500px;">
     <img src="src/assets/img/projectDescription/projectPage.png"/>
     <p><b>Picture 4.</b> Project page.</p>
   </div>
-  <div style="text-align: center;  max-width: 500px;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 500px;">
     <img src="src/assets/img/projectDescription/projectDetailsPage.png"/>
     <p><b>Picture 5.</b> Project Details page.</p>
   </div>
-  <div style="text-align: center;  max-width: 500px;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 500px;">
     <img src="src/assets/img/projectDescription/notFoundPage.png"/>
     <p><b>Picture 6.</b> Not Found page.</p>
   </div>
