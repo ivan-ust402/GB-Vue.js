@@ -13,7 +13,11 @@ Interno is my first educational project written on the VueJS framework, using th
 * SCSS
 
 ## Visual display of the application's operation (Визуальное отображение функциональности или экранов приложения)
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+<div style="display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;">
   <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 500px;">
     <img src="src/assets/img/projectDescription/homepage.png"/>
     <p><b>Picture 1.</b> Homepage.</p>
