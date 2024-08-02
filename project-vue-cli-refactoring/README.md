@@ -23,7 +23,7 @@ Interno is my first educational project written on the VueJS framework, using th
   align-items: center;
   justify-content: center;
   max-width: 500px;">
-    <img src="src/assets/img/projectDescription/homepage.png"/>
+    <img src="src/assets/img/projectDescription/homepage.png" width="500px"/>
     <p><b>Picture 1.</b> Homepage.</p>
   </div>
   <div style="display: flex;
@@ -31,7 +31,7 @@ Interno is my first educational project written on the VueJS framework, using th
   align-items: center;
   justify-content: center;
   max-width: 500px;">
-    <img src="src/assets/img/projectDescription/blogPage.png"/>
+    <img src="src/assets/img/projectDescription/blogPage.png" width="500px"/>
     <p><b>Picture 2.</b> Blog page.</p>
   </div>
   <div style="display: flex;
@@ -39,7 +39,7 @@ Interno is my first educational project written on the VueJS framework, using th
   align-items: center;
   justify-content: center;
   max-width: 500px;">
-    <img src="src/assets/img/projectDescription/blogDetailsPage.png"/>
+    <img src="src/assets/img/projectDescription/blogDetailsPage.png" width="500px"/>
     <p><b>Picture 3.</b> Blog details page.</p>
   </div>
   <div style="display: flex;
@@ -47,7 +47,7 @@ Interno is my first educational project written on the VueJS framework, using th
   align-items: center;
   justify-content: center;
   max-width: 500px;">
-    <img src="src/assets/img/projectDescription/projectPage.png"/>
+    <img src="src/assets/img/projectDescription/projectPage.png" width="500px"/>
     <p><b>Picture 4.</b> Project page.</p>
   </div>
   <div style="display: flex;
@@ -55,7 +55,7 @@ Interno is my first educational project written on the VueJS framework, using th
   align-items: center;
   justify-content: center;
   max-width: 500px;">
-    <img src="src/assets/img/projectDescription/projectDetailsPage.png"/>
+    <img src="src/assets/img/projectDescription/projectDetailsPage.png" width="500px"/>
     <p><b>Picture 5.</b> Project Details page.</p>
   </div>
   <div style="display: flex;
@@ -63,7 +63,7 @@ Interno is my first educational project written on the VueJS framework, using th
   align-items: center;
   justify-content: center;
   max-width: 500px;">
-    <img src="src/assets/img/projectDescription/notFoundPage.png"/>
+    <img src="src/assets/img/projectDescription/notFoundPage.png" width="500px"/>
     <p><b>Picture 6.</b> Not Found page.</p>
   </div>
 </div>
