@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import BlogArticleBlock from "../blocks/BlogArticleBlock"
+import BlogArticleBlock from "@/blocks/other/BlogArticleBlock"
 import BlogTagComponent from "../components/tags/BlogTagComponent"
 import { useHead } from "@vueuse/head"
 

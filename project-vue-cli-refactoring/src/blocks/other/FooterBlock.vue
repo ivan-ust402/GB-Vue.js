@@ -59,7 +59,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import FooterNavComponent from "../components/navs/FooterNavComponent.vue";
+import FooterNavComponent from "@/components/navs/FooterNavComponent.vue";
 
 
 export default {

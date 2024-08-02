@@ -13,7 +13,7 @@
 
 <script>
 import IntroBlock from "@/blocks/intro/IntroBlock.vue"
-import ProjectsDisplayBlock from "@/blocks/ProjectsDisplayBlock.vue"
+import ProjectsDisplayBlock from "@/blocks/other/ProjectsDisplayBlock.vue"
 import { useHead } from "@vueuse/head"
 
 export default {

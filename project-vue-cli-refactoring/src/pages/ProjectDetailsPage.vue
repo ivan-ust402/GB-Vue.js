@@ -22,7 +22,7 @@
 <script>
 import IntroBlock from "@/blocks/intro/IntroBlock.vue"
 import { mapGetters, mapActions } from "vuex"
-import SliderProjectDetailsBlock from "@/blocks/SliderProjectDetailsBlock.vue"
+import SliderProjectDetailsBlock from "@/blocks/other/SliderProjectDetailsBlock.vue"
 import { useHead } from "@vueuse/head"
 
 export default {

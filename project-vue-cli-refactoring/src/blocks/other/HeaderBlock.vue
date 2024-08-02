@@ -13,7 +13,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import HeaderNavComponent from "../components/navs/HeaderNavComponent";
+import HeaderNavComponent from "@/components/navs/HeaderNavComponent";
 
 export default {
   components: {

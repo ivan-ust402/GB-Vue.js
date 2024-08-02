@@ -45,7 +45,7 @@ import "swiper/css/zoom"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { Zoom, Navigation, Pagination } from "swiper/modules"
-import LoupeComponent from "../components/icons/LoupeComponent"
+import LoupeComponent from "@/components/icons/LoupeComponent"
 
 export default {
   components: {

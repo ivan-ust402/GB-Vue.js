@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import HeaderBlock from "./blocks/HeaderBlock";
-import FooterBlock from "./blocks/FooterBlock";
+import HeaderBlock from "./blocks/other/HeaderBlock";
+import FooterBlock from "./blocks/other/FooterBlock";
 
 
 
